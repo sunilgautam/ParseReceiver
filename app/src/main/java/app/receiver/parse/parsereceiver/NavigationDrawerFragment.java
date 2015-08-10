@@ -20,13 +20,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-/**
- * Fragment used for managing interactions for and presentation of a navigation drawer.
- * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
- * design guidelines</a> for a complete explanation of the behaviors implemented here.
- */
 public class NavigationDrawerFragment extends Fragment {
 
     /**
@@ -48,7 +42,7 @@ public class NavigationDrawerFragment extends Fragment {
     /**
      * Helper component that ties the action bar to the navigation drawer.
      */
-    private ActionBarDrawerToggle mDrawerToggle;
+    public ActionBarDrawerToggle mDrawerToggle;
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
@@ -111,12 +105,6 @@ public class NavigationDrawerFragment extends Fragment {
         return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }
 
-    /**
-     * Users of this fragment must call this method to set up the navigation drawer interactions.
-     *
-     * @param fragmentId   The android:id of this fragment in its activity's layout.
-     * @param drawerLayout The DrawerLayout containing this fragment's UI.
-     */
     public void setUp(int fragmentId, DrawerLayout drawerLayout) {
         mFragmentContainerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
@@ -132,11 +120,11 @@ public class NavigationDrawerFragment extends Fragment {
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.
         mDrawerToggle = new ActionBarDrawerToggle(
-                getActivity(),                    /* host Activity */
-                mDrawerLayout,                    /* DrawerLayout object */
-                R.drawable.ic_drawer,             /* nav drawer image to replace 'Up' caret */
-                R.string.navigation_drawer_open,  /* "open drawer" description for accessibility */
-                R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
+                getActivity(),                         /* host Activity */
+                mDrawerLayout,                       /* DrawerLayout object */
+                R.drawable.ic_drawer,                 /* nav drawer image to replace 'Up' caret */
+                R.string.navigation_drawer_open,    /* "open drawer" description for accessibility */
+                R.string.navigation_drawer_close    /* "close drawer" description for accessibility */
         ) {
             @Override
             public void onDrawerClosed(View drawerView) {
@@ -270,4 +258,5 @@ public class NavigationDrawerFragment extends Fragment {
          */
         void onNavigationDrawerItemSelected(int position);
     }
+
 }
