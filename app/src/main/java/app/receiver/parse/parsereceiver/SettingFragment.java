@@ -1,18 +1,81 @@
 package app.receiver.parse.parsereceiver;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.Set;
 
 public class SettingFragment extends BaseFragment {
+
+    public final static String LOGTAG = SettingFragment.class.getName();
 
     public SettingFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_setting, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_setting, container, false);
+
+        Setting setting = Utility.getSettings(getActivity().getApplicationContext());
+
+        EditText txtAppId = (EditText)rootView.findViewById(R.id.txtAppId);
+        EditText txtClientKey = (EditText)rootView.findViewById(R.id.txtClientKey);
+
+        if (setting.getAppId() != null)
+        {
+            txtAppId.setText(setting.getAppId());
+        }
+
+        if (setting.getClientKey() != null)
+        {
+            txtClientKey.setText(setting.getClientKey());
+        }
+
+        Button saveButton = (Button)rootView.findViewById(R.id.btnSaveReminder);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText txtAppId = (EditText)rootView.findViewById(R.id.txtAppId);
+                EditText txtClientKey = (EditText)rootView.findViewById(R.id.txtClientKey);
+
+                String appId = txtAppId.getText().toString().trim();
+                String clientKey = txtClientKey.getText().toString().trim();
+
+                if (appId.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Enter app id", Toast.LENGTH_SHORT).show();
+                }
+                else if (clientKey.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Enter client key", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    if (!appId.equals(ParseReceiver.PARSE_SETTING.getAppId()) || !clientKey.equals(ParseReceiver.PARSE_SETTING.getClientKey()))
+                    {
+                        Setting setting = new Setting();
+                        setting.setAppId(appId);
+                        setting.setClientKey(clientKey);
+                        Utility.setSettings(getActivity().getApplicationContext(), setting);
+
+                        Utility.reInitializeParse(getActivity(), ParseReceiver.PARSE_SETTING);
+
+                        Toast.makeText(getActivity(), "Settings saved", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Log.e(LOGTAG, "No setting changed");
+                    }
+                }
+            }
+        });
 
         return rootView;
     }

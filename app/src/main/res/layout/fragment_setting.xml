@@ -3,8 +3,54 @@
     android:layout_height="match_parent"
     tools:context="app.receiver.parse.parsereceiver.SettingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="Setting" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_gravity="top|center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/lblAppId"
+                style="@style/Label"
+                android:text="@string/AppId" />
+
+            <EditText
+                android:id="@+id/txtAppId"
+                style="@style/TextInput"
+                android:inputType="none" />
+
+
+            <TextView
+                android:id="@+id/lblClientKey"
+                style="@style/Label"
+                android:text="@string/ClientKey" />
+
+            <EditText
+                android:id="@+id/txtClientKey"
+                style="@style/TextInput"
+                android:inputType="none" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnSaveReminder"
+                    style="@style/Button"
+                    android:layout_width="match_parent"
+                    android:layout_weight=".50"
+                    android:text="@string/save"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
