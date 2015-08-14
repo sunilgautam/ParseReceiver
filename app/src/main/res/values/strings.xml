@@ -8,6 +8,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="save">Save</string>
+    <string name="reload_config">Reload Config</string>
     <string name="update">Update</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
@@ -15,7 +16,13 @@
     <string name="no">No</string>
     <string name="delete">Delete</string>
     <string name="edit">Edit</string>
+    <string name="no_data">No appData found</string>
 
     <string name="AppId">App Id:</string>
     <string name="ClientKey">Client Key:</string>
+
+    <string name="progress_read_config">Loading config ...</string>
+    <string name="progress_read_data">Loading data ...</string>
+    <string name="done_read_config">Config loaded.</string>
+    <string name="done_read_data">Data loaded.</string>
 </resources>

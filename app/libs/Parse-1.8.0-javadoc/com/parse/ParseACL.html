@@ -612,7 +612,7 @@ public boolean <B>getRoleReadAccess</B>(<A HREF="../../com/parse/ParseRole.html"
 <DL>
 <DD>Get whether users belonging to the given role are allowed to read this object. Even if this
  returns <code>false</code>, the role may still be able to read it if a parent role has read access.
- The role must already be saved on the server and its data must have been fetched in order to
+ The role must already be saved on the server and its appData must have been fetched in order to
  use this method.
 <P>
 <DD><DL>
@@ -629,7 +629,7 @@ public void <B>setRoleReadAccess</B>(<A HREF="../../com/parse/ParseRole.html" ti
                               boolean&nbsp;allowed)</PRE>
 <DL>
 <DD>Set whether users belonging to the given role are allowed to read this object. The role must
- already be saved on the server and its data must have been fetched in order to use this method.
+ already be saved on the server and its appData must have been fetched in order to use this method.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>role</CODE> - The role to assign access.<DD><CODE>allowed</CODE> - Whether the given role can read this object.</DL>
@@ -644,7 +644,7 @@ public boolean <B>getRoleWriteAccess</B>(<A HREF="../../com/parse/ParseRole.html
 <DL>
 <DD>Get whether users belonging to the given role are allowed to write this object. Even if this
  returns <code>false</code>, the role may still be able to write it if a parent role has write
- access. The role must already be saved on the server and its data must have been fetched in
+ access. The role must already be saved on the server and its appData must have been fetched in
  order to use this method.
 <P>
 <DD><DL>
@@ -661,7 +661,7 @@ public void <B>setRoleWriteAccess</B>(<A HREF="../../com/parse/ParseRole.html" t
                                boolean&nbsp;allowed)</PRE>
 <DL>
 <DD>Set whether users belonging to the given role are allowed to write this object. The role must
- already be saved on the server and its data must have been fetched in order to use this method.
+ already be saved on the server and its appData must have been fetched in order to use this method.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>role</CODE> - The role to assign access.<DD><CODE>allowed</CODE> - Whether the given role can write this object.</DL>

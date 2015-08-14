@@ -98,7 +98,7 @@ Class GetDataCallback</H2>
 </PRE>
 
 <P>
-A GetDataCallback is used to run code after a <A HREF="../../com/parse/ParseFile.html" title="class in com.parse"><CODE>ParseFile</CODE></A> fetches its data on a background
+A GetDataCallback is used to run code after a <A HREF="../../com/parse/ParseFile.html" title="class in com.parse"><CODE>ParseFile</CODE></A> fetches its appData on a background
  thread.
  <p>
  The easiest way to use a GetDataCallback is through an anonymous inner class. Override the
@@ -106,7 +106,7 @@ A GetDataCallback is used to run code after a <A HREF="../../com/parse/ParseFile
  The <code>done</code> function will be run in the UI thread, while the fetch happens in a
  background thread. This ensures that the UI does not freeze while the fetch happens.
  <p>
- file.getDataInBackground(new GetDataCallback() { public void done(byte[] data, ParseException e)
+ file.getDataInBackground(new GetDataCallback() { public void done(byte[] appData, ParseException e)
  { // ... } });
 <P>
 
@@ -142,7 +142,7 @@ A GetDataCallback is used to run code after a <A HREF="../../com/parse/ParseFile
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>abstract &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../com/parse/GetDataCallback.html#done(byte[], com.parse.ParseException)">done</A></B>(byte[]&nbsp;data,
+<TD><CODE><B><A HREF="../../com/parse/GetDataCallback.html#done(byte[], com.parse.ParseException)">done</A></B>(byte[]&nbsp;appData,
      <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A>&nbsp;e)</CODE>
 
 <BR>
@@ -191,7 +191,7 @@ public <B>GetDataCallback</B>()</PRE>
 <A NAME="done(byte[], com.parse.ParseException)"><!-- --></A><H3>
 done</H3>
 <PRE>
-public abstract void <B>done</B>(byte[]&nbsp;data,
+public abstract void <B>done</B>(byte[]&nbsp;appData,
                           <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A>&nbsp;e)</PRE>
 <DL>
 <DD><DL>

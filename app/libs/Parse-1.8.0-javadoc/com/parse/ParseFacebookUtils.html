@@ -158,7 +158,7 @@ Provides a set of utilities for using Parse with Facebook.
 <CODE>static&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseFacebookUtils.html#finishAuthentication(int, int, android.content.Intent)">finishAuthentication</A></B>(int&nbsp;requestCode,
                      int&nbsp;resultCode,
-                     <A target="_top" HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;data)</CODE>
+                     <A target="_top" HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;appData)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Completes authentication after the Facebook app returns an activity result.</TD>
@@ -269,7 +269,7 @@ Provides a set of utilities for using Parse with Facebook.
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.</TD>
+ providing access to Facebook appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -305,7 +305,7 @@ Provides a set of utilities for using Parse with Facebook.
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.</TD>
+ providing access to Facebook appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -346,7 +346,7 @@ Provides a set of utilities for using Parse with Facebook.
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.</TD>
+ providing access to Facebook appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -358,7 +358,7 @@ Provides a set of utilities for using Parse with Facebook.
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.</TD>
+ providing access to Facebook appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -446,7 +446,7 @@ Provides a set of utilities for using Parse with Facebook.
                       <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saves the latest session data to the user.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saves the latest session appData to the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -454,7 +454,7 @@ Provides a set of utilities for using Parse with Facebook.
 <TD><CODE><B><A HREF="../../com/parse/ParseFacebookUtils.html#saveLatestSessionDataInBackground(com.parse.ParseUser)">saveLatestSessionDataInBackground</A></B>(<A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saves the latest session data to the user.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saves the latest session appData to the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -598,7 +598,7 @@ unlink</H3>
 public static void <B>unlink</B>(<A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user)
                    throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
-<DD>Unlinks a user from a Facebook account. Unlinking a user will save the user's data.
+<DD>Unlinks a user from a Facebook account. Unlinking a user will save the user's appData.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to unlink from Facebook.
@@ -614,7 +614,7 @@ unlinkInBackground</H3>
 public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</A>&gt; <B>unlinkInBackground</B>(<A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user)</PRE>
 <DL>
 <DD>Unlinks a user from a Facebook account in the background. Unlinking a user will save the user's
- data.
+ appData.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to unlink from Facebook.
@@ -630,7 +630,7 @@ public static void <B>unlinkInBackground</B>(<A HREF="../../com/parse/ParseUser.
                                       <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>Unlinks a user from a Facebook account in the background. Unlinking a user will save the user's
- data.
+ appData.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to unlink from a Facebook account.<DD><CODE>callback</CODE> - Callback for notifying when unlinking is complete.</DL>
@@ -647,7 +647,7 @@ public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/
                                                 <A target="_top" HREF="http://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util">Date</A>&nbsp;expirationDate)</PRE>
 <DL>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user. This method allows you to handle getting access
+ providing access to Facebook appData for the user. This method allows you to handle getting access
  tokens for the user yourself, rather than delegating to the Facebook SDK.
 <P>
 <DD><DL>
@@ -685,11 +685,11 @@ public static void <B>link</B>(<A HREF="../../com/parse/ParseUser.html" title="c
                         <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user. This method allows you to handle getting access
+ providing access to Facebook appData for the user. This method allows you to handle getting access
  tokens for the user yourself, rather than delegating to the Facebook SDK.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to link to a Facebook account.<DD><CODE>facebookId</CODE> - The facebook ID of the user being linked.<DD><CODE>accessToken</CODE> - The access token for the user.<DD><CODE>expirationDate</CODE> - The expiration date of the access token.<DD><CODE>callback</CODE> - Callback for notifying when the new authentication data has been saved to the user.</DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to link to a Facebook account.<DD><CODE>facebookId</CODE> - The facebook ID of the user being linked.<DD><CODE>accessToken</CODE> - The access token for the user.<DD><CODE>expirationDate</CODE> - The expiration date of the access token.<DD><CODE>callback</CODE> - Callback for notifying when the new authentication appData has been saved to the user.</DL>
 </DD>
 </DL>
 <HR>
@@ -703,7 +703,7 @@ public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/
                                                 int&nbsp;activityCode)</PRE>
 <DL>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user. This method delegates to the Facebook SDK's
+ providing access to Facebook appData for the user. This method delegates to the Facebook SDK's
  <code>authenticate()</code> method.
  <p />
  <b>IMPORTANT:</b> Note that single sign-on authentication will not function correctly if you do
@@ -729,7 +729,7 @@ public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to link to a Facebook account.<DD><CODE>permissions</CODE> - A list of permissions to be used when logging in. Many of these constants are defined
           here: <A HREF="../../com/parse/ParseFacebookUtils.Permissions.html" title="class in com.parse"><CODE>ParseFacebookUtils.Permissions</CODE></A>.<DD><CODE>activity</CODE> - The Android activity in which we want to display the authorization dialog.<DD><CODE>activityCode</CODE> - Single sign-on requires an activity result to be called back to the client application
-          -- if you are waiting on other activities to return data, pass a custom activity code
+          -- if you are waiting on other activities to return appData, pass a custom activity code
           here to avoid collisions.
 <DT><B>Returns:</B><DD>A Task that will be resolved when linking is completed.</DL>
 </DD>
@@ -786,7 +786,7 @@ public static void <B>link</B>(<A HREF="../../com/parse/ParseUser.html" title="c
                         <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user. This method delegates to the Facebook SDK's
+ providing access to Facebook appData for the user. This method delegates to the Facebook SDK's
  <code>authenticate()</code> method.
  <p />
  <b>IMPORTANT:</b> Note that single sign-on authentication will not function correctly if you do
@@ -812,7 +812,7 @@ public static void <B>link</B>(<A HREF="../../com/parse/ParseUser.html" title="c
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to link to a Facebook account.<DD><CODE>permissions</CODE> - A list of permissions to be used when logging in. Many of these constants are defined
           here: <A HREF="../../com/parse/ParseFacebookUtils.Permissions.html" title="class in com.parse"><CODE>ParseFacebookUtils.Permissions</CODE></A>.<DD><CODE>activity</CODE> - The Android activity in which we want to display the authorization dialog.<DD><CODE>activityCode</CODE> - Single sign-on requires an activity result to be called back to the client application
-          -- if you are waiting on other activities to return data, pass a custom activity code
+          -- if you are waiting on other activities to return appData, pass a custom activity code
           here to avoid collisions.<DD><CODE>callback</CODE> - Callback for notifying the calling application when the Facebook authentication has
           completed, failed, or been canceled.</DL>
 </DD>
@@ -959,7 +959,7 @@ public static void <B>logIn</B>(<A target="_top" HREF="http://developer.android.
  handle getting access tokens for the user yourself, rather than delegating to the Facebook SDK.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>facebookId</CODE> - The facebook ID of the user being linked.<DD><CODE>accessToken</CODE> - The access token for the user.<DD><CODE>expirationDate</CODE> - The expiration date of the access token.<DD><CODE>callback</CODE> - Callback for notifying when the new authentication data has been saved to the user.</DL>
+<DT><B>Parameters:</B><DD><CODE>facebookId</CODE> - The facebook ID of the user being linked.<DD><CODE>accessToken</CODE> - The access token for the user.<DD><CODE>expirationDate</CODE> - The expiration date of the access token.<DD><CODE>callback</CODE> - Callback for notifying when the new authentication appData has been saved to the user.</DL>
 </DD>
 </DL>
 <HR>
@@ -998,7 +998,7 @@ public static bolts.Task&lt;<A HREF="../../com/parse/ParseUser.html" title="clas
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>permissions</CODE> - A list of permissions to be used when logging in. Many of these constants are defined
           here: <A HREF="../../com/parse/ParseFacebookUtils.Permissions.html" title="class in com.parse"><CODE>ParseFacebookUtils.Permissions</CODE></A>.<DD><CODE>activity</CODE> - The Android activity in which we want to display the authorization dialog.<DD><CODE>activityCode</CODE> - Single sign-on requires an activity result to be called back to the client application
-          -- if you are waiting on other activities to return data, pass a custom activity code
+          -- if you are waiting on other activities to return appData, pass a custom activity code
           here to avoid collisions.
 <DT><B>Returns:</B><DD>A Task that will be resolved when logging in is completed.</DL>
 </DD>
@@ -1040,7 +1040,7 @@ public static void <B>logIn</B>(<A target="_top" HREF="http://developer.android.
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>permissions</CODE> - A list of permissions to be used when logging in. Many of these constants are defined
           here: <A HREF="../../com/parse/ParseFacebookUtils.Permissions.html" title="class in com.parse"><CODE>ParseFacebookUtils.Permissions</CODE></A>.<DD><CODE>activity</CODE> - The Android activity in which we want to display the authorization dialog.<DD><CODE>activityCode</CODE> - Single sign-on requires an activity result to be called back to the client application
-          -- if you are waiting on other activities to return data, pass a custom activity code
+          -- if you are waiting on other activities to return appData, pass a custom activity code
           here to avoid collisions.<DD><CODE>callback</CODE> - Callback for notifying the calling application when the Facebook authentication has
           completed, failed, or been canceled.</DL>
 </DD>
@@ -1092,7 +1092,7 @@ finishAuthentication</H3>
 <PRE>
 public static void <B>finishAuthentication</B>(int&nbsp;requestCode,
                                         int&nbsp;resultCode,
-                                        <A target="_top" HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;data)</PRE>
+                                        <A target="_top" HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;appData)</PRE>
 <DL>
 <DD>Completes authentication after the Facebook app returns an activity result. <b>IMPORTANT:</b>
  This method must be invoked at the top of the calling activity's onActivityResult() function or
@@ -1116,7 +1116,7 @@ saveLatestSessionDataInBackground</H3>
 <PRE>
 public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</A>&gt; <B>saveLatestSessionDataInBackground</B>(<A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user)</PRE>
 <DL>
-<DD>Saves the latest session data to the user. Call this after requesting new read or publish
+<DD>Saves the latest session appData to the user. Call this after requesting new read or publish
  permissions for the user's Facebook session.
 <P>
 <DD><DL>
@@ -1132,11 +1132,11 @@ saveLatestSessionData</H3>
 public static void <B>saveLatestSessionData</B>(<A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user,
                                          <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</PRE>
 <DL>
-<DD>Saves the latest session data to the user. Call this after requesting new read or publish
+<DD>Saves the latest session appData to the user. Call this after requesting new read or publish
  permissions for the user's Facebook session.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>user</CODE> - The user whose session information should be updated.<DD><CODE>callback</CODE> - Callback invoked when the session data has been saved.</DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - The user whose session information should be updated.<DD><CODE>callback</CODE> - Callback invoked when the session appData has been saved.</DL>
 </DD>
 </DL>
 <HR>

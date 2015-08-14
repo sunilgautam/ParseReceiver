@@ -153,7 +153,7 @@ Class ParseTwitterUtils</H2>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.</TD>
+ providing access to Twitter appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -180,7 +180,7 @@ Class ParseTwitterUtils</H2>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.</TD>
+ providing access to Twitter appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -190,7 +190,7 @@ Class ParseTwitterUtils</H2>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.</TD>
+ providing access to Twitter appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -203,7 +203,7 @@ Class ParseTwitterUtils</H2>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.</TD>
+ providing access to Twitter appData for the user.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -341,7 +341,7 @@ public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/
                                                 <A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user)</PRE>
 <DL>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user. A dialog will be shown to the user for Twitter
+ providing access to Twitter appData for the user. A dialog will be shown to the user for Twitter
  authentication.
 <P>
 <DD><DL>
@@ -374,7 +374,7 @@ public static void <B>link</B>(<A HREF="../../com/parse/ParseUser.html" title="c
                         <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user. A dialog will be shown to the user for Twitter
+ providing access to Twitter appData for the user. A dialog will be shown to the user for Twitter
  authentication.
 <P>
 <DD><DL>
@@ -394,7 +394,7 @@ public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/
                                                 <A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;authTokenSecret)</PRE>
 <DL>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user. This method allows you to handle getting the
+ providing access to Twitter appData for the user. This method allows you to handle getting the
  auth tokens for your users, rather than delegating to the provided dialog log-in.
 <P>
 <DD><DL>
@@ -434,11 +434,11 @@ public static void <B>link</B>(<A HREF="../../com/parse/ParseUser.html" title="c
                         <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user. This method allows you to handle getting the
+ providing access to Twitter appData for the user. This method allows you to handle getting the
  auth tokens for your users, rather than delegating to the provided dialog log-in.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to link to a Twitter account.<DD><CODE>twitterId</CODE> - The user's Twitter ID.<DD><CODE>screenName</CODE> - The user's Twitter screen name.<DD><CODE>authToken</CODE> - The auth token for the session.<DD><CODE>authTokenSecret</CODE> - The auth token secret for the session.<DD><CODE>callback</CODE> - Callback for notifying that the authentication data has been saved to the ParseUser.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParseTwitterUtils.html#linkInBackground(com.parse.ParseUser, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><CODE>ParseTwitterUtils.linkInBackground(ParseUser, String, String, String, String)</CODE></A></DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to link to a Twitter account.<DD><CODE>twitterId</CODE> - The user's Twitter ID.<DD><CODE>screenName</CODE> - The user's Twitter screen name.<DD><CODE>authToken</CODE> - The auth token for the session.<DD><CODE>authTokenSecret</CODE> - The auth token secret for the session.<DD><CODE>callback</CODE> - Callback for notifying that the authentication appData has been saved to the ParseUser.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParseTwitterUtils.html#linkInBackground(com.parse.ParseUser, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><CODE>ParseTwitterUtils.linkInBackground(ParseUser, String, String, String, String)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -478,7 +478,7 @@ public static void <B>logIn</B>(<A target="_top" HREF="http://developer.android.
  log-in.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>twitterId</CODE> - The user's Twitter ID.<DD><CODE>screenName</CODE> - The user's Twitter screen name.<DD><CODE>authToken</CODE> - The auth token for the session.<DD><CODE>authTokenSecret</CODE> - The auth token secret for the session.<DD><CODE>callback</CODE> - Callback for notifying that the authentication data has been saved to the ParseUser.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParseTwitterUtils.html#logInInBackground(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><CODE>ParseTwitterUtils.logInInBackground(String, String, String, String)</CODE></A></DL>
+<DT><B>Parameters:</B><DD><CODE>twitterId</CODE> - The user's Twitter ID.<DD><CODE>screenName</CODE> - The user's Twitter screen name.<DD><CODE>authToken</CODE> - The auth token for the session.<DD><CODE>authTokenSecret</CODE> - The auth token secret for the session.<DD><CODE>callback</CODE> - Callback for notifying that the authentication appData has been saved to the ParseUser.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParseTwitterUtils.html#logInInBackground(java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><CODE>ParseTwitterUtils.logInInBackground(String, String, String, String)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -522,7 +522,7 @@ unlink</H3>
 public static void <B>unlink</B>(<A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user)
                    throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
-<DD>Unlinks a user from a Twitter account. Unlinking a user will save the user's data.
+<DD>Unlinks a user from a Twitter account. Unlinking a user will save the user's appData.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to unlink from a Facebook account.
@@ -538,7 +538,7 @@ unlinkInBackground</H3>
 public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</A>&gt; <B>unlinkInBackground</B>(<A HREF="../../com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>&nbsp;user)</PRE>
 <DL>
 <DD>Unlinks a user from a Twitter account in the background. Unlinking a user will save the user's
- data.
+ appData.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to unlink from a Facebook account.
@@ -554,7 +554,7 @@ public static void <B>unlinkInBackground</B>(<A HREF="../../com/parse/ParseUser.
                                       <A HREF="../../com/parse/SaveCallback.html" title="class in com.parse">SaveCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>Unlinks a user from a Twitter account in the background. Unlinking a user will save the user's
- data.
+ appData.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>user</CODE> - The user to unlink from a Facebook account.<DD><CODE>callback</CODE> - Callback for notifying when unlinking is complete.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParseTwitterUtils.html#unlinkInBackground(com.parse.ParseUser)"><CODE>ParseTwitterUtils.unlinkInBackground(ParseUser)</CODE></A></DL>

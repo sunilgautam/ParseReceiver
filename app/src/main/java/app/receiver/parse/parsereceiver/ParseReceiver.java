@@ -2,13 +2,10 @@ package app.receiver.parse.parsereceiver;
 
 import android.app.Application;
 
-import com.parse.Parse;
-import com.parse.ParseACL;
-import com.parse.ParseCrashReporting;
-import com.parse.ParseInstallation;
-import com.parse.ParseUser;
+import utility.Utility;
 
-public class ParseReceiver extends Application {
+public class ParseReceiver extends Application
+{
 
     public static String PACKAGE_NAME;
     public static String SHARED_PREF_KEY;
@@ -16,7 +13,8 @@ public class ParseReceiver extends Application {
     public static Setting PARSE_SETTING;
 
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         super.onCreate();
 
         PACKAGE_NAME = getApplicationContext().getPackageName();

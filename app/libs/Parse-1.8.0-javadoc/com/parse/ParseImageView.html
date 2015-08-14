@@ -107,19 +107,19 @@ A specialized <code>ImageView</code> that downloads and displays remote images s
  servers.
  <p>
  Given a <code>ParseFile</code> storing an image, a <code>ParseImageView</code> works seamlessly to fetch
- the file data and display it in the background. See below for an example:
+ the file appData and display it in the background. See below for an example:
  
  <pre>
  ParseImageView imageView = (ParseImageView) findViewById(android.R.id.icon);
  // The placeholder will be used before and during the fetch, to be replaced by the fetched image
- // data.
+ // appData.
  imageView.setPlaceholder(getResources().getDrawable(R.drawable.placeholder));
  imageView.setParseFile(file);
  imageView.loadInBackground(new GetDataCallback() {
    &#064;Override
-   public void done(byte[] data, ParseException e) {
+   public void done(byte[] appData, ParseException e) {
      Log.i(&quot;ParseImageView&quot;,
-         &quot;Fetched! Data length: &quot; + data.length + &quot;, or exception: &quot; + e.getMessage());
+         &quot;Fetched! Data length: &quot; + appData.length + &quot;, or exception: &quot; + e.getMessage());
    }
  });
  </pre>
@@ -389,8 +389,8 @@ public void <B>setPlaceholder</B>(<A target="_top" HREF="http://developer.androi
 <DD>Sets the placeholder to be used while waiting for an image to be loaded.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>placeholder</CODE> - A <code>Drawable</code> to be displayed while the remote image data is being fetched. This
-          value can be null, and this <code>ImageView</code> will simply be blank while data is
+<DT><B>Parameters:</B><DD><CODE>placeholder</CODE> - A <code>Drawable</code> to be displayed while the remote image appData is being fetched. This
+          value can be null, and this <code>ImageView</code> will simply be blank while appData is
           fetched.</DL>
 </DD>
 </DL>
@@ -414,12 +414,12 @@ loadInBackground</H3>
 <PRE>
 public bolts.Task&lt;byte[]&gt; <B>loadInBackground</B>()</PRE>
 <DL>
-<DD>Kick off downloading of remote image. When the download is finished, the image data will be
+<DD>Kick off downloading of remote image. When the download is finished, the image appData will be
  displayed.
 <P>
 <DD><DL>
 
-<DT><B>Returns:</B><DD>A Task that is resolved when the image data is fetched and this View displays the image.</DL>
+<DT><B>Returns:</B><DD>A Task that is resolved when the image appData is fetched and this View displays the image.</DL>
 </DD>
 </DL>
 <HR>
@@ -429,11 +429,11 @@ loadInBackground</H3>
 <PRE>
 public void <B>loadInBackground</B>(<A HREF="../../com/parse/GetDataCallback.html" title="class in com.parse">GetDataCallback</A>&nbsp;completionCallback)</PRE>
 <DL>
-<DD>Kick off downloading of remote image. When the download is finished, the image data will be
+<DD>Kick off downloading of remote image. When the download is finished, the image appData will be
  displayed and the <code>completionCallback</code> will be triggered.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>completionCallback</CODE> - A custom <code>GetDataCallback</code> to be called after the image data is fetched and this
+<DT><B>Parameters:</B><DD><CODE>completionCallback</CODE> - A custom <code>GetDataCallback</code> to be called after the image appData is fetched and this
           <code>ImageView</code> displays the image.</DL>
 </DD>
 </DL>

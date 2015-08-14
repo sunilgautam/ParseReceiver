@@ -121,7 +121,7 @@ A BroadcastReceiver for rendering and reacting to to Notifications.
  element:
 
  <pre>
-   &lt;meta-data android:name=&quot;com.parse.push.notification_icon&quot;
+   &lt;meta-appData android:name=&quot;com.parse.push.notification_icon&quot;
               android:resource=&quot;@drawable/icon&quot;/&gt;
  </pre>
 
@@ -220,7 +220,7 @@ A BroadcastReceiver for rendering and reacting to to Notifications.
 <TD><CODE><B><A HREF="../../com/parse/ParsePushBroadcastReceiver.html#PROPERTY_PUSH_ICON">PROPERTY_PUSH_ICON</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the meta-data field used to override the icon used in Notifications.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the meta-appData field used to override the icon used in Notifications.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -425,7 +425,7 @@ PROPERTY_PUSH_ICON</H3>
 <PRE>
 public static final <A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>PROPERTY_PUSH_ICON</B></PRE>
 <DL>
-<DD>The name of the meta-data field used to override the icon used in Notifications.
+<DD>The name of the meta-appData field used to override the icon used in Notifications.
 <P>
 <DL>
 <DT><B>See Also:</B><DD><A HREF="../../constant-values.html#com.parse.ParsePushBroadcastReceiver.PROPERTY_PUSH_ICON">Constant Field Values</A></DL>
@@ -481,7 +481,7 @@ public void <B>onReceive</B>(<A target="_top" HREF="http://developer.android.com
 <DT><B>Specified by:</B><DD><CODE><A target="_top" HREF="http://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true#onReceive(android.content.Context, android.content.Intent)" title="class or interface in android.content">onReceive</A></CODE> in class <CODE><A target="_top" HREF="http://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</A></CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParsePushBroadcastReceiver.html#onPushReceive(android.content.Context, android.content.Intent)"><CODE>ParsePushBroadcastReceiver.onPushReceive(Context, Intent)</CODE></A>, 
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParsePushBroadcastReceiver.html#onPushReceive(android.content.Context, android.content.Intent)"><CODE>ParsePushBroadcastReceiver.onPushReceive(Context, Intent)</CODE></A>,
 <A HREF="../../com/parse/ParsePushBroadcastReceiver.html#onPushOpen(android.content.Context, android.content.Intent)"><CODE>ParsePushBroadcastReceiver.onPushOpen(Context, Intent)</CODE></A>, 
 <A HREF="../../com/parse/ParsePushBroadcastReceiver.html#onPushDismiss(android.content.Context, android.content.Intent)"><CODE>ParsePushBroadcastReceiver.onPushDismiss(Context, Intent)</CODE></A></DL>
 </DD>
@@ -495,11 +495,11 @@ protected void <B>onPushReceive</B>(<A target="_top" HREF="http://developer.andr
                              <A target="_top" HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;intent)</PRE>
 <DL>
 <DD>Called when the push notification is received. By default, a broadcast intent will be sent if an
- "action" is present in the data and a notification will be show if "alert" and "title" are
- present in the data.
+ "action" is present in the appData and a notification will be show if "alert" and "title" are
+ present in the appData.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.</DL>
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.</DL>
 </DD>
 </DL>
 <HR>
@@ -514,7 +514,7 @@ protected void <B>onPushDismiss</B>(<A target="_top" HREF="http://developer.andr
  on notification dismissal.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.</DL>
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.</DL>
 </DD>
 </DL>
 <HR>
@@ -532,7 +532,7 @@ protected void <B>onPushOpen</B>(<A target="_top" HREF="http://developer.android
  by getActivity() in the back stack.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.</DL>
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.</DL>
 </DD>
 </DL>
 <HR>
@@ -548,7 +548,7 @@ protected <A target="_top" HREF="http://developer.android.com/reference/java/lan
  Returns null if no launch intent is defined in AndroidManifest.xml
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.
 <DT><B>Returns:</B><DD>The default activity class of the package</DL>
 </DD>
 </DL>
@@ -561,12 +561,12 @@ protected int <B>getSmallIconId</B>(<A target="_top" HREF="http://developer.andr
                              <A target="_top" HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;intent)</PRE>
 <DL>
 <DD>Retrieves the small icon to be used in a Notification. The default implementation uses the
- icon specified in the "com.parse.push.notification_icon" manifest meta-data with a fallback to
+ icon specified in the "com.parse.push.notification_icon" manifest meta-appData with a fallback to
  the launcher icon for this package. To conform to Android style guides, it is highly recommended
  that developers specify an explicit push icon.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.
 <DT><B>Returns:</B><DD>The resource id of the default small icon for the package<DT><B>See Also:</B><DD><a href="http://developer.android.com/design/style/iconography.html#notification">Android Notification Style Guide</a></DL>
 </DD>
 </DL>
@@ -584,7 +584,7 @@ protected <A target="_top" HREF="http://developer.android.com/reference/android/
  only the small icon.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.
 <DT><B>Returns:</B><DD>Bitmap of the default large icon for the package<DT><B>See Also:</B><DD><a href="http://developer.android.com/guide/topics/ui/notifiers/notifications.html#NotificationUI">Android Notification UI Overview</a></DL>
 </DD>
 </DL>
@@ -597,13 +597,13 @@ protected <A target="_top" HREF="http://developer.android.com/reference/android/
                                        <A target="_top" HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;intent)</PRE>
 <DL>
 <DD>Creates a Notification with reasonable defaults. If "alert" and "title" are
- both missing from data, then returns null. If the text in the notification is longer
+ both missing from appData, then returns null. If the text in the notification is longer
  than 38 characters long, the style of the notification will be set to BigTextStyle.
  As a security precaution, developers overriding this method should be sure to set the package
  on notification Intents to avoid leaking information to other apps.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and data of the current push notification.
+<DT><B>Parameters:</B><DD><CODE>context</CODE> - The Context in which the receiver is running.<DD><CODE>intent</CODE> - An Intent containing the channel and appData of the current push notification.
 <DT><B>Returns:</B><DD>The notification to be displayed.<DT><B>See Also:</B><DD><A HREF="../../com/parse/ParsePushBroadcastReceiver.html#onPushReceive(android.content.Context, android.content.Intent)"><CODE>ParsePushBroadcastReceiver.onPushReceive(Context, Intent)</CODE></A></DL>
 </DD>
 </DL>

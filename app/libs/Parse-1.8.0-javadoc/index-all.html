@@ -151,7 +151,7 @@ Static method in class com.parse.<A HREF="./com/parse/ParseCloud.html" title="cl
 <DD>Calls a cloud function in the background.
 <DT><A HREF="./com/parse/ParseFile.html#cancel()"><B>cancel()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
-<DD>Cancels the current network request and callbacks whether it's uploading or fetching data from
+<DD>Cancels the current network request and callbacks whether it's uploading or fetching appData from
  the server.
 <DT><A HREF="./com/parse/ParseQuery.html#cancel()"><B>cancel()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>
@@ -342,7 +342,7 @@ Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" t
 <DL>
 <DT><A HREF="./com/parse/ParseObject.html#fetch()"><B>fetch()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Fetches this object with the data from the server.
+<DD>Fetches this object with the appData from the server.
 <DT><A HREF="./com/parse/ParseUser.html#fetch()"><B>fetch()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>
 <DD>&nbsp;
@@ -351,13 +351,13 @@ Static method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="c
 <DD>Fetches all the objects in the provided list.
 <DT><A HREF="./com/parse/ParseObject.html#fetchAllIfNeeded(java.util.List)"><B>fetchAllIfNeeded(List&lt;T&gt;)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Fetches all the objects that don't have data in the provided list.
+<DD>Fetches all the objects that don't have appData in the provided list.
 <DT><A HREF="./com/parse/ParseObject.html#fetchAllIfNeededInBackground(java.util.List)"><B>fetchAllIfNeededInBackground(List&lt;T&gt;)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Fetches all the objects that don't have data in the provided list in the background.
+<DD>Fetches all the objects that don't have appData in the provided list in the background.
 <DT><A HREF="./com/parse/ParseObject.html#fetchAllIfNeededInBackground(java.util.List, com.parse.FindCallback)"><B>fetchAllIfNeededInBackground(List&lt;T&gt;, FindCallback&lt;T&gt;)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Fetches all the objects that don't have data in the provided list in the background.
+<DD>Fetches all the objects that don't have appData in the provided list in the background.
 <DT><A HREF="./com/parse/ParseObject.html#fetchAllInBackground(java.util.List)"><B>fetchAllInBackground(List&lt;T&gt;)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
 <DD>Fetches all the objects in the provided list in the background.
@@ -366,11 +366,11 @@ Static method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="c
 <DD>Fetches all the objects in the provided list in the background.
 <DT><A HREF="./com/parse/ParseObject.html#fetchFromLocalDatastore()"><B>fetchFromLocalDatastore()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Loads data from the local datastore into this object, if it has not been fetched from the
+<DD>Loads appData from the local datastore into this object, if it has not been fetched from the
  server already.
 <DT><A HREF="./com/parse/ParseObject.html#fetchFromLocalDatastoreInBackground(com.parse.GetCallback)"><B>fetchFromLocalDatastoreInBackground(GetCallback&lt;T&gt;)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Loads data from the local datastore into this object, if it has not been fetched from the
+<DD>Loads appData from the local datastore into this object, if it has not been fetched from the
  server already.
 <DT><A HREF="./com/parse/ParseObject.html#fetchIfNeeded()"><B>fetchIfNeeded()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
@@ -386,10 +386,10 @@ Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in
 <DD>If this ParseObject has not been fetched (i.e.
 <DT><A HREF="./com/parse/ParseObject.html#fetchInBackground()"><B>fetchInBackground()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Fetches this object with the data from the server in a background thread.
+<DD>Fetches this object with the appData from the server in a background thread.
 <DT><A HREF="./com/parse/ParseObject.html#fetchInBackground(com.parse.GetCallback)"><B>fetchInBackground(GetCallback&lt;T&gt;)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Fetches this object with the data from the server in a background thread.
+<DD>Fetches this object with the appData from the server in a background thread.
 <DT><A HREF="./com/parse/ParseException.html#FILE_DELETE_ERROR"><B>FILE_DELETE_ERROR</B></A> - 
 Static variable in exception com.parse.<A HREF="./com/parse/ParseException.html" title="class in com.parse">ParseException</A>
 <DD>Error code indicating that deleting a file failed.
@@ -443,7 +443,7 @@ Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in
 <DD>Access a value.
 <DT><A HREF="./com/parse/ParseQuery.html#get(java.lang.String)"><B>get(String)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>
-<DD>Constructs a ParseObject whose id is already known by fetching data from the source.
+<DD>Constructs a ParseObject whose id is already known by fetching appData from the source.
 <DT><A HREF="./com/parse/ParseObject.html#getACL()"><B>getACL()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
 <DD>Access the ParseACL governing this object.
@@ -515,23 +515,23 @@ Static method in class com.parse.<A HREF="./com/parse/ParseUser.html" title="cla
  disk if necessary.
 <DT><A HREF="./com/parse/ParseFile.html#getData()"><B>getData()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
-<DD>Synchronously gets the data for this object.
-<DT><A HREF="./com/parse/GetDataCallback.html" title="class in com.parse"><B>GetDataCallback</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>A GetDataCallback is used to run code after a <A HREF="./com/parse/ParseFile.html" title="class in com.parse"><CODE>ParseFile</CODE></A> fetches its data on a background
+<DD>Synchronously gets the appData for this object.
+<DT><A HREF="./com/parse/GetDataCallback.html" title="class in com.parse"><B>GetDataCallback</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>A GetDataCallback is used to run code after a <A HREF="./com/parse/ParseFile.html" title="class in com.parse"><CODE>ParseFile</CODE></A> fetches its appData on a background
  thread.<DT><A HREF="./com/parse/GetDataCallback.html#GetDataCallback()"><B>GetDataCallback()</B></A> - 
 Constructor for class com.parse.<A HREF="./com/parse/GetDataCallback.html" title="class in com.parse">GetDataCallback</A>
 <DD>&nbsp;
 <DT><A HREF="./com/parse/ParseFile.html#getDataInBackground(com.parse.ProgressCallback)"><B>getDataInBackground(ProgressCallback)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
-<DD>Gets the data for this object in a background thread.
+<DD>Gets the appData for this object in a background thread.
 <DT><A HREF="./com/parse/ParseFile.html#getDataInBackground()"><B>getDataInBackground()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
-<DD>Gets the data for this object in a background thread.
+<DD>Gets the appData for this object in a background thread.
 <DT><A HREF="./com/parse/ParseFile.html#getDataInBackground(com.parse.GetDataCallback, com.parse.ProgressCallback)"><B>getDataInBackground(GetDataCallback, ProgressCallback)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
-<DD>Gets the data for this object in a background thread.
+<DD>Gets the appData for this object in a background thread.
 <DT><A HREF="./com/parse/ParseFile.html#getDataInBackground(com.parse.GetDataCallback)"><B>getDataInBackground(GetDataCallback)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
-<DD>Gets the data for this object in a background thread.
+<DD>Gets the appData for this object in a background thread.
 <DT><A HREF="./com/parse/ParseConfig.html#getDate(java.lang.String)"><B>getDate(String)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseConfig.html" title="class in com.parse">ParseConfig</A>
 <DD>Access a date value.
@@ -575,11 +575,11 @@ Static method in class com.parse.<A HREF="./com/parse/ParseConfig.html" title="c
 <DD>Fetches a new configuration object from the server in a background thread.
 <DT><A HREF="./com/parse/ParseQuery.html#getInBackground(java.lang.String)"><B>getInBackground(String)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>
-<DD>Constructs a ParseObject whose id is already known by fetching data from the source in a
+<DD>Constructs a ParseObject whose id is already known by fetching appData from the source in a
  background thread.
 <DT><A HREF="./com/parse/ParseQuery.html#getInBackground(java.lang.String, com.parse.GetCallback)"><B>getInBackground(String, GetCallback&lt;T&gt;)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>
-<DD>Constructs a ParseObject whose id is already known by fetching data from the source in a
+<DD>Constructs a ParseObject whose id is already known by fetching appData from the source in a
  background thread.
 <DT><A HREF="./com/parse/ParseInstallation.html#getInstallationId()"><B>getInstallationId()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseInstallation.html" title="class in com.parse">ParseInstallation</A>
@@ -667,7 +667,7 @@ Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in
 <DD>Access a Map<String, V> value
 <DT><A HREF="./com/parse/ParseQuery.html#getMaxCacheAge()"><B>getMaxCacheAge()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>
-<DD>Gets the maximum age of cached data that will be considered in this query.
+<DD>Gets the maximum age of cached appData that will be considered in this query.
 <DT><A HREF="./com/parse/ParseFile.html#getName()"><B>getName()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
 <DD>The filename.
@@ -819,8 +819,8 @@ Method in class com.parse.<A HREF="./com/parse/ParseRole.html" title="class in c
  role.
 <DT><A HREF="./com/parse/ParseQueryAdapter.html#getView(int, android.view.View, android.view.ViewGroup)"><B>getView(int, View, ViewGroup)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQueryAdapter.html" title="class in com.parse">ParseQueryAdapter</A>
-<DD>The base class, <code>Adapter</code>, defines a <code>getView</code> method intended to display data at
- the specified position in the data set.
+<DD>The base class, <code>Adapter</code>, defines a <code>getView</code> method intended to display appData at
+ the specified position in the appData set.
 <DT><A HREF="./com/parse/ParseQueryAdapter.html#getViewTypeCount()"><B>getViewTypeCount()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQueryAdapter.html" title="class in com.parse">ParseQueryAdapter</A>
 <DD>&nbsp;
@@ -918,7 +918,7 @@ Method in class com.parse.<A HREF="./com/parse/ParseUser.html" title="class in c
 <DD>Whether the ParseUser has been authenticated on this device.
 <DT><A HREF="./com/parse/ParseFile.html#isDataAvailable()"><B>isDataAvailable()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseFile.html" title="class in com.parse">ParseFile</A>
-<DD>Whether the file has available data.
+<DD>Whether the file has available appData.
 <DT><A HREF="./com/parse/ParseObject.html#isDataAvailable()"><B>isDataAvailable()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
 <DD>Gets whether the ParseObject has been fetched.
@@ -971,11 +971,11 @@ Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" t
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#link(com.parse.ParseUser, java.lang.String, java.lang.String, java.util.Date, com.parse.SaveCallback)"><B>link(ParseUser, String, String, Date, SaveCallback)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.
+ providing access to Facebook appData for the user.
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#link(com.parse.ParseUser, java.util.Collection, android.app.Activity, int, com.parse.SaveCallback)"><B>link(ParseUser, Collection&lt;String&gt;, Activity, int, SaveCallback)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.
+ providing access to Facebook appData for the user.
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#link(com.parse.ParseUser, java.util.Collection, android.app.Activity, com.parse.SaveCallback)"><B>link(ParseUser, Collection&lt;String&gt;, Activity, SaveCallback)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD>Links a user using the default activity code if single sign-on is enabled.
@@ -1005,7 +1005,7 @@ Static method in class com.parse.<A HREF="./com/parse/ParseTwitterUtils.html" ti
 <DT><A HREF="./com/parse/ParseTwitterUtils.html#link(com.parse.ParseUser, android.content.Context, com.parse.SaveCallback)"><B>link(ParseUser, Context, SaveCallback)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseTwitterUtils.html" title="class in com.parse">ParseTwitterUtils</A>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.
+ providing access to Twitter appData for the user.
 <DT><A HREF="./com/parse/ParseTwitterUtils.html#link(com.parse.ParseUser, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><B>link(ParseUser, String, String, String, String)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseTwitterUtils.html" title="class in com.parse">ParseTwitterUtils</A>
 <DD><B>Deprecated.</B>&nbsp;<I>Please use <A HREF="./com/parse/ParseTwitterUtils.html#linkInBackground(com.parse.ParseUser, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><CODE>ParseTwitterUtils.linkInBackground(ParseUser, String, String,
@@ -1013,7 +1013,7 @@ Static method in class com.parse.<A HREF="./com/parse/ParseTwitterUtils.html" ti
 <DT><A HREF="./com/parse/ParseTwitterUtils.html#link(com.parse.ParseUser, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.parse.SaveCallback)"><B>link(ParseUser, String, String, String, String, SaveCallback)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseTwitterUtils.html" title="class in com.parse">ParseTwitterUtils</A>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.
+ providing access to Twitter appData for the user.
 <DT><A HREF="./com/parse/ParseException.html#LINKED_ID_MISSING"><B>LINKED_ID_MISSING</B></A> - 
 Static variable in exception com.parse.<A HREF="./com/parse/ParseException.html" title="class in com.parse">ParseException</A>
 <DD>Error code indicating that a user cannot be linked to an account because that account's id
@@ -1021,11 +1021,11 @@ Static variable in exception com.parse.<A HREF="./com/parse/ParseException.html"
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#linkInBackground(com.parse.ParseUser, java.lang.String, java.lang.String, java.util.Date)"><B>linkInBackground(ParseUser, String, String, Date)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.
+ providing access to Facebook appData for the user.
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#linkInBackground(com.parse.ParseUser, java.util.Collection, android.app.Activity, int)"><B>linkInBackground(ParseUser, Collection&lt;String&gt;, Activity, int)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD>Links a ParseUser to a Facebook account, allowing you to use Facebook for authentication, and
- providing access to Facebook data for the user.
+ providing access to Facebook appData for the user.
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#linkInBackground(com.parse.ParseUser, java.util.Collection, android.app.Activity)"><B>linkInBackground(ParseUser, Collection&lt;String&gt;, Activity)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD>&nbsp;
@@ -1038,11 +1038,11 @@ Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" t
 <DT><A HREF="./com/parse/ParseTwitterUtils.html#linkInBackground(android.content.Context, com.parse.ParseUser)"><B>linkInBackground(Context, ParseUser)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseTwitterUtils.html" title="class in com.parse">ParseTwitterUtils</A>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.
+ providing access to Twitter appData for the user.
 <DT><A HREF="./com/parse/ParseTwitterUtils.html#linkInBackground(com.parse.ParseUser, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"><B>linkInBackground(ParseUser, String, String, String, String)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseTwitterUtils.html" title="class in com.parse">ParseTwitterUtils</A>
 <DD>Links a ParseUser to a Twitter account, allowing you to use Twitter for authentication, and
- providing access to Twitter data for the user.
+ providing access to Twitter appData for the user.
 <DT><A HREF="./com/parse/ParseImageView.html#loadInBackground()"><B>loadInBackground()</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseImageView.html" title="class in com.parse">ParseImageView</A>
 <DD>Kick off downloading of remote image.
@@ -1224,7 +1224,7 @@ Constructor for class com.parse.<A HREF="./com/parse/ParseACL.html" title="class
 <DT><A HREF="./com/parse/ParseAnalytics.html" title="class in com.parse"><B>ParseAnalytics</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParseAnalytics class provides an interface to Parse's logging and analytics backend.<DT><A HREF="./com/parse/ParseAnalytics.html#ParseAnalytics()"><B>ParseAnalytics()</B></A> - 
 Constructor for class com.parse.<A HREF="./com/parse/ParseAnalytics.html" title="class in com.parse">ParseAnalytics</A>
 <DD>&nbsp;
-<DT><A HREF="./com/parse/ParseAnonymousUtils.html" title="class in com.parse"><B>ParseAnonymousUtils</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>Provides utility functions for working with Anonymously logged-in users.<DT><A HREF="./com/parse/ParseClassName.html" title="annotation in com.parse"><B>ParseClassName</B></A> - Annotation Type in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>Associates a class name for a subclass of ParseObject.<DT><A HREF="./com/parse/ParseCloud.html" title="class in com.parse"><B>ParseCloud</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParseCloud class defines provides methods for interacting with Parse Cloud Functions.<DT><A HREF="./com/parse/ParseConfig.html" title="class in com.parse"><B>ParseConfig</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParseConfig is a local representation of configuration data that can be set from the Parse
+<DT><A HREF="./com/parse/ParseAnonymousUtils.html" title="class in com.parse"><B>ParseAnonymousUtils</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>Provides utility functions for working with Anonymously logged-in users.<DT><A HREF="./com/parse/ParseClassName.html" title="annotation in com.parse"><B>ParseClassName</B></A> - Annotation Type in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>Associates a class name for a subclass of ParseObject.<DT><A HREF="./com/parse/ParseCloud.html" title="class in com.parse"><B>ParseCloud</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParseCloud class defines provides methods for interacting with Parse Cloud Functions.<DT><A HREF="./com/parse/ParseConfig.html" title="class in com.parse"><B>ParseConfig</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParseConfig is a local representation of configuration appData that can be set from the Parse
  dashboard.<DT><A HREF="./com/parse/ParseException.html" title="class in com.parse"><B>ParseException</B></A> - Exception in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>A ParseException gets raised whenever a <A HREF="./com/parse/ParseObject.html" title="class in com.parse"><CODE>ParseObject</CODE></A> issues an invalid request, such as
  deleting or editing an object that no longer exists on the server, or when there is a network
  failure preventing communication with the Parse server.<DT><A HREF="./com/parse/ParseException.html#ParseException(int, java.lang.String)"><B>ParseException(int, String)</B></A> - 
@@ -1268,14 +1268,14 @@ Constructor for class com.parse.<A HREF="./com/parse/ParseImageView.html" title=
 <DT><A HREF="./com/parse/ParseInstallation.html" title="class in com.parse"><B>ParseInstallation</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>&nbsp;<DT><A HREF="./com/parse/ParseInstallation.html#ParseInstallation()"><B>ParseInstallation()</B></A> - 
 Constructor for class com.parse.<A HREF="./com/parse/ParseInstallation.html" title="class in com.parse">ParseInstallation</A>
 <DD>&nbsp;
-<DT><A HREF="./com/parse/ParseObject.html" title="class in com.parse"><B>ParseObject</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParseObject is a local representation of data that can be saved and retrieved from the Parse
+<DT><A HREF="./com/parse/ParseObject.html" title="class in com.parse"><B>ParseObject</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParseObject is a local representation of appData that can be saved and retrieved from the Parse
  cloud.<DT><A HREF="./com/parse/ParseObject.html#ParseObject()"><B>ParseObject()</B></A> - 
 Constructor for class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
 <DD>The base class constructor to call in subclasses.
 <DT><A HREF="./com/parse/ParseObject.html#ParseObject(java.lang.String)"><B>ParseObject(String)</B></A> - 
 Constructor for class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Constructs a new ParseObject with no data in it.
-<DT><A HREF="./com/parse/ParsePush.html" title="class in com.parse"><B>ParsePush</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParsePush is a local representation of data that can be sent as a push notification.<DT><A HREF="./com/parse/ParsePush.html#ParsePush()"><B>ParsePush()</B></A> - 
+<DD>Constructs a new ParseObject with no appData in it.
+<DT><A HREF="./com/parse/ParsePush.html" title="class in com.parse"><B>ParsePush</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>The ParsePush is a local representation of appData that can be sent as a push notification.<DT><A HREF="./com/parse/ParsePush.html#ParsePush()"><B>ParsePush()</B></A> -
 Constructor for class com.parse.<A HREF="./com/parse/ParsePush.html" title="class in com.parse">ParsePush</A>
 <DD>Creates a new push notification.
 <DT><A HREF="./com/parse/ParsePushBroadcastReceiver.html" title="class in com.parse"><B>ParsePushBroadcastReceiver</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>A BroadcastReceiver for rendering and reacting to to Notifications.<DT><A HREF="./com/parse/ParsePushBroadcastReceiver.html#ParsePushBroadcastReceiver()"><B>ParsePushBroadcastReceiver()</B></A> - 
@@ -1315,7 +1315,7 @@ Constructor for class com.parse.<A HREF="./com/parse/ParseRole.html" title="clas
 <DD>Constructs a new ParseRole with the given name.
 <DT><A HREF="./com/parse/ParseTwitterUtils.html" title="class in com.parse"><B>ParseTwitterUtils</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>&nbsp;<DT><A HREF="./com/parse/ParseUser.html" title="class in com.parse"><B>ParseUser</B></A> - Class in <A HREF="./com/parse/package-summary.html">com.parse</A><DD>&nbsp;<DT><A HREF="./com/parse/ParseUser.html#ParseUser()"><B>ParseUser()</B></A> - 
 Constructor for class com.parse.<A HREF="./com/parse/ParseUser.html" title="class in com.parse">ParseUser</A>
-<DD>Constructs a new ParseUser with no data in it.
+<DD>Constructs a new ParseUser with no appData in it.
 <DT><A HREF="./com/parse/ParseException.html#PASSWORD_MISSING"><B>PASSWORD_MISSING</B></A> - 
 Static variable in exception com.parse.<A HREF="./com/parse/ParseException.html" title="class in com.parse">ParseException</A>
 <DD>Error code indicating that the password is missing or empty.
@@ -1360,7 +1360,7 @@ Constructor for class com.parse.<A HREF="./com/parse/ProgressCallback.html" titl
 <DD>&nbsp;
 <DT><A HREF="./com/parse/ParsePushBroadcastReceiver.html#PROPERTY_PUSH_ICON"><B>PROPERTY_PUSH_ICON</B></A> - 
 Static variable in class com.parse.<A HREF="./com/parse/ParsePushBroadcastReceiver.html" title="class in com.parse">ParsePushBroadcastReceiver</A>
-<DD>The name of the meta-data field used to override the icon used in Notifications.
+<DD>The name of the meta-appData field used to override the icon used in Notifications.
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#provider"><B>provider</B></A> - 
 Static variable in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD>&nbsp;
@@ -1409,7 +1409,7 @@ Method in class com.parse.<A HREF="./com/parse/ParseInstallation.html" title="cl
 <DD>&nbsp;
 <DT><A HREF="./com/parse/ParseObject.html#remove(java.lang.String)"><B>remove(String)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>
-<DD>Removes a key from this object's data if it exists.
+<DD>Removes a key from this object's appData if it exists.
 <DT><A HREF="./com/parse/ParseRelation.html#remove(T)"><B>remove(T)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseRelation.html" title="class in com.parse">ParseRelation</A>
 <DD>Removes an object from this relation.
@@ -1489,13 +1489,13 @@ Method in class com.parse.<A HREF="./com/parse/ParseObject.html" title="class in
 <DD>Saves this object to the server in a background thread.
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#saveLatestSessionData(com.parse.ParseUser, com.parse.SaveCallback)"><B>saveLatestSessionData(ParseUser, SaveCallback)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
-<DD>Saves the latest session data to the user.
+<DD>Saves the latest session appData to the user.
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#saveLatestSessionData(com.parse.ParseUser)"><B>saveLatestSessionData(ParseUser)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
 <DD><B>Deprecated.</B>&nbsp;<I>Please use <A HREF="./com/parse/ParseFacebookUtils.html#saveLatestSessionDataInBackground(com.parse.ParseUser)"><CODE>ParseFacebookUtils.saveLatestSessionDataInBackground(ParseUser)</CODE></A> instead.</I>
 <DT><A HREF="./com/parse/ParseFacebookUtils.html#saveLatestSessionDataInBackground(com.parse.ParseUser)"><B>saveLatestSessionDataInBackground(ParseUser)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseFacebookUtils.html" title="class in com.parse">ParseFacebookUtils</A>
-<DD>Saves the latest session data to the user.
+<DD>Saves the latest session appData to the user.
 <DT><A HREF="./com/parse/ParseException.html#SCRIPT_ERROR"><B>SCRIPT_ERROR</B></A> - 
 Static variable in exception com.parse.<A HREF="./com/parse/ParseException.html" title="class in com.parse">ParseException</A>
 <DD>Error code indicating that a Cloud Code script failed.
@@ -1547,7 +1547,7 @@ Method in class com.parse.<A HREF="./com/parse/ParsePush.html" title="class in c
 <DD>Sets the collection of channels on which this push notification will be sent.
 <DT><A HREF="./com/parse/ParsePush.html#setData(org.json.JSONObject)"><B>setData(JSONObject)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParsePush.html" title="class in com.parse">ParsePush</A>
-<DD>Sets the entire data of the push message.
+<DD>Sets the entire appData of the push message.
 <DT><A HREF="./com/parse/ParseACL.html#setDefaultACL(com.parse.ParseACL, boolean)"><B>setDefaultACL(ParseACL, boolean)</B></A> - 
 Static method in class com.parse.<A HREF="./com/parse/ParseACL.html" title="class in com.parse">ParseACL</A>
 <DD>Sets a default ACL that will be applied to all <A HREF="./com/parse/ParseObject.html" title="class in com.parse"><CODE>ParseObject</CODE></A>s when they are created.
@@ -1586,7 +1586,7 @@ Method in class com.parse.<A HREF="./com/parse/ParseGeoPoint.html" title="class 
 <DD>Set longitude.
 <DT><A HREF="./com/parse/ParseQuery.html#setMaxCacheAge(long)"><B>setMaxCacheAge(long)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>
-<DD>Sets the maximum age of cached data that will be considered in this query.
+<DD>Sets the maximum age of cached appData that will be considered in this query.
 <DT><A HREF="./com/parse/ParsePush.html#setMessage(java.lang.String)"><B>setMessage(String)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParsePush.html" title="class in com.parse">ParsePush</A>
 <DD>Sets the message that will be shown in the notification.
@@ -1616,7 +1616,7 @@ Method in class com.parse.<A HREF="./com/parse/ParseImageView.html" title="class
 <DD>Sets the placeholder to be used while waiting for an image to be loaded.
 <DT><A HREF="./com/parse/ParseQueryAdapter.html#setPlaceholder(android.graphics.drawable.Drawable)"><B>setPlaceholder(Drawable)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseQueryAdapter.html" title="class in com.parse">ParseQueryAdapter</A>
-<DD>Sets a placeholder image to be used when fetching data for each item in the <code>AdapterView</code>
+<DD>Sets a placeholder image to be used when fetching appData for each item in the <code>AdapterView</code>
  .
 <DT><A HREF="./com/parse/ParseACL.html#setPublicReadAccess(boolean)"><B>setPublicReadAccess(boolean)</B></A> - 
 Method in class com.parse.<A HREF="./com/parse/ParseACL.html" title="class in com.parse">ParseACL</A>

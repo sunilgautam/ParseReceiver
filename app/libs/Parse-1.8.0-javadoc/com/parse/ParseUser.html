@@ -133,7 +133,7 @@ Class ParseUser</H2>
 <TD><CODE><B><A HREF="../../com/parse/ParseUser.html#ParseUser()">ParseUser</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new ParseUser with no data in it.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new ParseUser with no appData in it.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -184,7 +184,7 @@ Class ParseUser</H2>
 <TD><CODE><B><A HREF="../../com/parse/ParseUser.html#fetch()">fetch</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the data from the server.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the appData from the server.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -303,7 +303,7 @@ Class ParseUser</H2>
 <TD><CODE><B><A HREF="../../com/parse/ParseUser.html#remove(java.lang.String)">remove</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a key from this object's data if it exists.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a key from this object's appData if it exists.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -418,7 +418,7 @@ ParseUser</H3>
 <PRE>
 public <B>ParseUser</B>()</PRE>
 <DL>
-<DD>Constructs a new ParseUser with no data in it. A ParseUser constructed in this way will not
+<DD>Constructs a new ParseUser with no appData in it. A ParseUser constructed in this way will not
  have an objectId and will not persist to the database until <A HREF="../../com/parse/ParseUser.html#signUp()"><CODE>ParseUser.signUp()</CODE></A> is called.
 <P>
 </DL>
@@ -454,7 +454,7 @@ remove</H3>
 public void <B>remove</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</PRE>
 <DL>
 <DD><B>Description copied from class: <CODE><A HREF="../../com/parse/ParseObject.html#remove(java.lang.String)">ParseObject</A></CODE></B></DD>
-<DD>Removes a key from this object's data if it exists.
+<DD>Removes a key from this object's appData if it exists.
 <P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../com/parse/ParseObject.html#remove(java.lang.String)">remove</A></CODE> in class <CODE><A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A></CODE></DL>
@@ -570,7 +570,7 @@ public <A HREF="../../com/parse/ParseUser.html" title="class in com.parse">Parse
                 throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
 <DD><B>Description copied from class: <CODE><A HREF="../../com/parse/ParseObject.html#fetch()">ParseObject</A></CODE></B></DD>
-<DD>Fetches this object with the data from the server. Call this whenever you want the state of the
+<DD>Fetches this object with the appData from the server. Call this whenever you want the state of the
  object to reflect exactly what is on the server.
 <P>
 <DD><DL>
@@ -876,7 +876,7 @@ public <A HREF="../../com/parse/ParseUser.html" title="class in com.parse">Parse
 <DL>
 <DD><B>Description copied from class: <CODE><A HREF="../../com/parse/ParseObject.html#fetchIfNeeded()">ParseObject</A></CODE></B></DD>
 <DD>If this ParseObject has not been fetched (i.e. <A HREF="../../com/parse/ParseObject.html#isDataAvailable()"><CODE>ParseObject.isDataAvailable()</CODE></A> returns false),
- fetches this object with the data from the server.
+ fetches this object with the appData from the server.
 <P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../com/parse/ParseObject.html#fetchIfNeeded()">fetchIfNeeded</A></CODE> in class <CODE><A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A></CODE></DL>

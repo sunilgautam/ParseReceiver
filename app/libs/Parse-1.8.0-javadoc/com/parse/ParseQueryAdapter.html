@@ -357,8 +357,8 @@ A ParseQueryAdapter handles the fetching of objects by page, and displaying obje
         <A target="_top" HREF="http://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</A>&nbsp;parent)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The base class, <code>Adapter</code>, defines a <code>getView</code> method intended to display data at
- the specified position in the data set.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The base class, <code>Adapter</code>, defines a <code>getView</code> method intended to display appData at
+ the specified position in the appData set.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -448,7 +448,7 @@ A ParseQueryAdapter handles the fetching of objects by page, and displaying obje
 <TD><CODE><B><A HREF="../../com/parse/ParseQueryAdapter.html#setPlaceholder(android.graphics.drawable.Drawable)">setPlaceholder</A></B>(<A target="_top" HREF="http://developer.android.com/reference/android/graphics/drawable/Drawable.html?is-external=true" title="class or interface in android.graphics.drawable">Drawable</A>&nbsp;placeholder)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a placeholder image to be used when fetching data for each item in the <code>AdapterView</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a placeholder image to be used when fetching appData for each item in the <code>AdapterView</code>
  .</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -806,8 +806,8 @@ public final <A target="_top" HREF="http://developer.android.com/reference/andro
                           <A target="_top" HREF="http://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</A>&nbsp;convertView,
                           <A target="_top" HREF="http://developer.android.com/reference/android/view/ViewGroup.html?is-external=true" title="class or interface in android.view">ViewGroup</A>&nbsp;parent)</PRE>
 <DL>
-<DD>The base class, <code>Adapter</code>, defines a <code>getView</code> method intended to display data at
- the specified position in the data set. We override it here in order to toggle between
+<DD>The base class, <code>Adapter</code>, defines a <code>getView</code> method intended to display appData at
+ the specified position in the appData set. We override it here in order to toggle between
  <A HREF="../../com/parse/ParseQueryAdapter.html#getNextPageView(android.view.View, android.view.ViewGroup)"><CODE>ParseQueryAdapter.getNextPageView(View, ViewGroup)</CODE></A> and
  <A HREF="../../com/parse/ParseQueryAdapter.html#getItemView(T, android.view.View, android.view.ViewGroup)"><CODE>ParseQueryAdapter.getItemView(ParseObject, View, ViewGroup)</CODE></A> depending on the value of
  <A HREF="../../com/parse/ParseQueryAdapter.html#getItemViewType(int)"><CODE>ParseQueryAdapter.getItemViewType(int)</CODE></A>.
@@ -899,14 +899,14 @@ setPlaceholder</H3>
 <PRE>
 public void <B>setPlaceholder</B>(<A target="_top" HREF="http://developer.android.com/reference/android/graphics/drawable/Drawable.html?is-external=true" title="class or interface in android.graphics.drawable">Drawable</A>&nbsp;placeholder)</PRE>
 <DL>
-<DD>Sets a placeholder image to be used when fetching data for each item in the <code>AdapterView</code>
+<DD>Sets a placeholder image to be used when fetching appData for each item in the <code>AdapterView</code>
  . Will not be used if <A HREF="../../com/parse/ParseQueryAdapter.html#setImageKey(java.lang.String)"><CODE>ParseQueryAdapter.setImageKey(String)</CODE></A> was not used to define which images to
  display.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>placeholder</CODE> - A <code>Drawable</code> to be displayed while the remote image data is being fetched. This
+<DT><B>Parameters:</B><DD><CODE>placeholder</CODE> - A <code>Drawable</code> to be displayed while the remote image appData is being fetched. This
           value can be null, and <code>ImageView</code>s in this AdapterView will simply be blank
-          while data is being fetched.</DL>
+          while appData is being fetched.</DL>
 </DD>
 </DL>
 <HR>

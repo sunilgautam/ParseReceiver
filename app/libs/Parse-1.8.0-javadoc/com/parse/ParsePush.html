@@ -98,10 +98,10 @@ Class ParsePush</H2>
 </PRE>
 
 <P>
-The ParsePush is a local representation of data that can be sent as a push notification.
+The ParsePush is a local representation of appData that can be sent as a push notification.
  <p>
  The typical workflow for sending a push notification from the client is to construct a new
- ParsePush, use the setter functions to fill it with data, and then use
+ ParsePush, use the setter functions to fill it with appData, and then use
  <A HREF="../../com/parse/ParsePush.html#sendInBackground()"><CODE>ParsePush.sendInBackground()</CODE></A> to send it.
 <P>
 
@@ -154,7 +154,7 @@ The ParsePush is a local representation of data that can be sent as a push notif
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../com/parse/ParsePush.html#sendDataInBackground(org.json.JSONObject, com.parse.ParseQuery)">sendDataInBackground</A></B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;data,
+<TD><CODE><B><A HREF="../../com/parse/ParsePush.html#sendDataInBackground(org.json.JSONObject, com.parse.ParseQuery)">sendDataInBackground</A></B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;appData,
                      <A HREF="../../com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>&lt;<A HREF="../../com/parse/ParseInstallation.html" title="class in com.parse">ParseInstallation</A>&gt;&nbsp;query)</CODE>
 
 <BR>
@@ -163,7 +163,7 @@ The ParsePush is a local representation of data that can be sent as a push notif
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../com/parse/ParsePush.html#sendDataInBackground(org.json.JSONObject, com.parse.ParseQuery, com.parse.SendCallback)">sendDataInBackground</A></B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;data,
+<TD><CODE><B><A HREF="../../com/parse/ParsePush.html#sendDataInBackground(org.json.JSONObject, com.parse.ParseQuery, com.parse.SendCallback)">sendDataInBackground</A></B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;appData,
                      <A HREF="../../com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>&lt;<A HREF="../../com/parse/ParseInstallation.html" title="class in com.parse">ParseInstallation</A>&gt;&nbsp;query,
                      <A HREF="../../com/parse/SendCallback.html" title="class in com.parse">SendCallback</A>&nbsp;callback)</CODE>
 
@@ -224,10 +224,10 @@ The ParsePush is a local representation of data that can be sent as a push notif
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../com/parse/ParsePush.html#setData(org.json.JSONObject)">setData</A></B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;data)</CODE>
+<TD><CODE><B><A HREF="../../com/parse/ParsePush.html#setData(org.json.JSONObject)">setData</A></B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;appData)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the entire data of the push message.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the entire appData of the push message.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -457,16 +457,16 @@ public static void <B>sendMessageInBackground</B>(<A target="_top" HREF="http://
 <A NAME="sendDataInBackground(org.json.JSONObject, com.parse.ParseQuery)"><!-- --></A><H3>
 sendDataInBackground</H3>
 <PRE>
-public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</A>&gt; <B>sendDataInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;data,
+public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</A>&gt; <B>sendDataInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;appData,
                                                     <A HREF="../../com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>&lt;<A HREF="../../com/parse/ParseInstallation.html" title="class in com.parse">ParseInstallation</A>&gt;&nbsp;query)</PRE>
 <DL>
 <DD>A helper method to concisely send a push to a query. This method is equivalent to ParsePush
- push = new ParsePush(); push.setData(data); push.setQuery(query); push.sendInBackground();
+ push = new ParsePush(); push.setData(appData); push.setQuery(query); push.sendInBackground();
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>data</CODE> - The entire data of the push message. See the push guide for more details on the data
+<DT><B>Parameters:</B><DD><CODE>appData</CODE> - The entire appData of the push message. See the push guide for more details on the appData
           format.<DD><CODE>query</CODE> - A ParseInstallation query which specifies the recipients of a push.
-<DT><B>Returns:</B><DD>A task that is resolved when the data is sent.</DL>
+<DT><B>Returns:</B><DD>A task that is resolved when the appData is sent.</DL>
 </DD>
 </DL>
 <HR>
@@ -474,16 +474,16 @@ public static bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/
 <A NAME="sendDataInBackground(org.json.JSONObject, com.parse.ParseQuery, com.parse.SendCallback)"><!-- --></A><H3>
 sendDataInBackground</H3>
 <PRE>
-public static void <B>sendDataInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;data,
+public static void <B>sendDataInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;appData,
                                         <A HREF="../../com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</A>&lt;<A HREF="../../com/parse/ParseInstallation.html" title="class in com.parse">ParseInstallation</A>&gt;&nbsp;query,
                                         <A HREF="../../com/parse/SendCallback.html" title="class in com.parse">SendCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>A helper method to concisely send a push to a query. This method is equivalent to ParsePush
- push = new ParsePush(); push.setData(data); push.setQuery(query);
+ push = new ParsePush(); push.setData(appData); push.setQuery(query);
  push.sendInBackground(callback);
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>data</CODE> - The entire data of the push message. See the push guide for more details on the data
+<DT><B>Parameters:</B><DD><CODE>appData</CODE> - The entire appData of the push message. See the push guide for more details on the appData
           format.<DD><CODE>query</CODE> - A ParseInstallation query which specifies the recipients of a push.<DD><CODE>callback</CODE> - callback.done(e) is called when the send completes.</DL>
 </DD>
 </DL>
@@ -612,10 +612,10 @@ setPushToAndroid</H3>
 <A NAME="setData(org.json.JSONObject)"><!-- --></A><H3>
 setData</H3>
 <PRE>
-public void <B>setData</B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;data)</PRE>
+public void <B>setData</B>(<A target="_top" HREF="http://developer.android.com/reference/org/json/JSONObject.html?is-external=true" title="class or interface in org.json">JSONObject</A>&nbsp;appData)</PRE>
 <DL>
-<DD>Sets the entire data of the push message. See the push guide for more details on the data
- format. This will overwrite any data specified in <A HREF="../../com/parse/ParsePush.html#setMessage(java.lang.String)"><CODE>ParsePush.setMessage(String)</CODE></A>.
+<DD>Sets the entire appData of the push message. See the push guide for more details on the appData
+ format. This will overwrite any appData specified in <A HREF="../../com/parse/ParsePush.html#setMessage(java.lang.String)"><CODE>ParsePush.setMessage(String)</CODE></A>.
 <P>
 <DD><DL>
 </DL>
@@ -628,7 +628,7 @@ setMessage</H3>
 <PRE>
 public void <B>setMessage</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;message)</PRE>
 <DL>
-<DD>Sets the message that will be shown in the notification. This will overwrite any data specified
+<DD>Sets the message that will be shown in the notification. This will overwrite any appData specified
  in <A HREF="../../com/parse/ParsePush.html#setData(org.json.JSONObject)"><CODE>ParsePush.setData(JSONObject)</CODE></A>.
 <P>
 <DD><DL>

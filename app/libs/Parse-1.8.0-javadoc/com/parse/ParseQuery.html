@@ -332,7 +332,7 @@ The ParseQuery class defines a query that is used to fetch ParseObjects. The mos
 <TD><CODE><B><A HREF="../../com/parse/ParseQuery.html#get(java.lang.String)">get</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;objectId)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a ParseObject whose id is already known by fetching data from the source.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a ParseObject whose id is already known by fetching appData from the source.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -382,7 +382,7 @@ The ParseQuery class defines a query that is used to fetch ParseObjects. The mos
 <TD><CODE><B><A HREF="../../com/parse/ParseQuery.html#getInBackground(java.lang.String)">getInBackground</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;objectId)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a ParseObject whose id is already known by fetching data from the source in a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a ParseObject whose id is already known by fetching appData from the source in a
  background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -392,7 +392,7 @@ The ParseQuery class defines a query that is used to fetch ParseObjects. The mos
                 <A HREF="../../com/parse/GetCallback.html" title="class in com.parse">GetCallback</A>&lt;<A HREF="../../com/parse/ParseQuery.html" title="type parameter in ParseQuery">T</A>&gt;&nbsp;callback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a ParseObject whose id is already known by fetching data from the source in a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a ParseObject whose id is already known by fetching appData from the source in a
  background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -409,7 +409,7 @@ The ParseQuery class defines a query that is used to fetch ParseObjects. The mos
 <TD><CODE><B><A HREF="../../com/parse/ParseQuery.html#getMaxCacheAge()">getMaxCacheAge</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the maximum age of cached data that will be considered in this query.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the maximum age of cached appData that will be considered in this query.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -540,7 +540,7 @@ The ParseQuery class defines a query that is used to fetch ParseObjects. The mos
 <TD><CODE><B><A HREF="../../com/parse/ParseQuery.html#setMaxCacheAge(long)">setMaxCacheAge</A></B>(long&nbsp;maxAgeInMilliseconds)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the maximum age of cached data that will be considered in this query.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the maximum age of cached appData that will be considered in this query.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -1056,7 +1056,7 @@ setMaxCacheAge</H3>
 <PRE>
 public void <B>setMaxCacheAge</B>(long&nbsp;maxAgeInMilliseconds)</PRE>
 <DL>
-<DD>Sets the maximum age of cached data that will be considered in this query.
+<DD>Sets the maximum age of cached appData that will be considered in this query.
 <P>
 <DD><DL>
 </DL>
@@ -1069,7 +1069,7 @@ getMaxCacheAge</H3>
 <PRE>
 public long <B>getMaxCacheAge</B>()</PRE>
 <DL>
-<DD>Gets the maximum age of cached data that will be considered in this query. The returned value
+<DD>Gets the maximum age of cached appData that will be considered in this query. The returned value
  is in milliseconds
 <P>
 <DD><DL>
@@ -1191,7 +1191,7 @@ get</H3>
 public <A HREF="../../com/parse/ParseQuery.html" title="type parameter in ParseQuery">T</A> <B>get</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;objectId)
                           throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
-<DD>Constructs a ParseObject whose id is already known by fetching data from the source. This
+<DD>Constructs a ParseObject whose id is already known by fetching appData from the source. This
  mutates the ParseQuery.
 <P>
 <DD><DL>
@@ -1248,7 +1248,7 @@ getInBackground</H3>
 <PRE>
 public bolts.Task&lt;<A HREF="../../com/parse/ParseQuery.html" title="type parameter in ParseQuery">T</A>&gt; <B>getInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;objectId)</PRE>
 <DL>
-<DD>Constructs a ParseObject whose id is already known by fetching data from the source in a
+<DD>Constructs a ParseObject whose id is already known by fetching appData from the source in a
  background thread. This does not use caching. This is preferable to using the
  ParseObject(className, objectId) constructor, unless your code is already running in a
  background thread.
@@ -1266,7 +1266,7 @@ getInBackground</H3>
 public void <B>getInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;objectId,
                             <A HREF="../../com/parse/GetCallback.html" title="class in com.parse">GetCallback</A>&lt;<A HREF="../../com/parse/ParseQuery.html" title="type parameter in ParseQuery">T</A>&gt;&nbsp;callback)</PRE>
 <DL>
-<DD>Constructs a ParseObject whose id is already known by fetching data from the source in a
+<DD>Constructs a ParseObject whose id is already known by fetching appData from the source in a
  background thread. This does not use caching. This is preferable to using the
  ParseObject(className, objectId) constructor, unless your code is already running in a
  background thread.

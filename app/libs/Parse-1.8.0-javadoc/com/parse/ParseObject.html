@@ -101,14 +101,14 @@ Class ParseObject</H2>
 </PRE>
 
 <P>
-The ParseObject is a local representation of data that can be saved and retrieved from the Parse
+The ParseObject is a local representation of appData that can be saved and retrieved from the Parse
  cloud.
  <p>
- The basic workflow for creating new data is to construct a new ParseObject, use put() to fill it
- with data, and then use save() to persist to the database.
+ The basic workflow for creating new appData is to construct a new ParseObject, use put() to fill it
+ with appData, and then use save() to persist to the database.
  <p>
- The basic workflow for accessing existing data is to use a <A HREF="../../com/parse/ParseQuery.html" title="class in com.parse"><CODE>ParseQuery</CODE></A> to specify which
- existing data to retrieve.
+ The basic workflow for accessing existing appData is to use a <A HREF="../../com/parse/ParseQuery.html" title="class in com.parse"><CODE>ParseQuery</CODE></A> to specify which
+ existing appData to retrieve.
 <P>
 
 <P>
@@ -155,7 +155,7 @@ The ParseObject is a local representation of data that can be saved and retrieve
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#ParseObject(java.lang.String)">ParseObject</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;theClassName)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new ParseObject with no data in it.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new ParseObject with no appData in it.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -377,7 +377,7 @@ T</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#fetch()">fetch</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the data from the server.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the appData from the server.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -411,7 +411,7 @@ T</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#fetchAllIfNeeded(java.util.List)">fetchAllIfNeeded</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;T&gt;&nbsp;objects)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches all the objects that don't have data in the provided list.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches all the objects that don't have appData in the provided list.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -428,7 +428,7 @@ bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#fetchAllIfNeededInBackground(java.util.List)">fetchAllIfNeededInBackground</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;T&gt;&nbsp;objects)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches all the objects that don't have data in the provided list in the background.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches all the objects that don't have appData in the provided list in the background.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -446,7 +446,7 @@ void</CODE></FONT></TD>
                              <A HREF="../../com/parse/FindCallback.html" title="class in com.parse">FindCallback</A>&lt;T&gt;&nbsp;callback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches all the objects that don't have data in the provided list in the background.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches all the objects that don't have appData in the provided list in the background.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -489,7 +489,7 @@ void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#fetchFromLocalDatastore()">fetchFromLocalDatastore</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads data from the local datastore into this object, if it has not been fetched from the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads appData from the local datastore into this object, if it has not been fetched from the
  server already.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -507,7 +507,7 @@ void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#fetchFromLocalDatastoreInBackground(com.parse.GetCallback)">fetchFromLocalDatastoreInBackground</A></B>(<A HREF="../../com/parse/GetCallback.html" title="class in com.parse">GetCallback</A>&lt;T&gt;&nbsp;callback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads data from the local datastore into this object, if it has not been fetched from the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads appData from the local datastore into this object, if it has not been fetched from the
  server already.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -576,7 +576,7 @@ bolts.Task&lt;T&gt;</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#fetchInBackground()">fetchInBackground</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the data from the server in a background thread.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the appData from the server in a background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -593,7 +593,7 @@ void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#fetchInBackground(com.parse.GetCallback)">fetchInBackground</A></B>(<A HREF="../../com/parse/GetCallback.html" title="class in com.parse">GetCallback</A>&lt;T&gt;&nbsp;callback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the data from the server in a background thread.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fetches this object with the appData from the server in a background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -1068,7 +1068,7 @@ void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../com/parse/ParseObject.html#remove(java.lang.String)">remove</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a key from this object's data if it exists.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a key from this object's appData if it exists.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -1457,7 +1457,7 @@ ParseObject</H3>
 <PRE>
 public <B>ParseObject</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;theClassName)</PRE>
 <DL>
-<DD>Constructs a new ParseObject with no data in it. A ParseObject constructed in this way will not
+<DD>Constructs a new ParseObject with no appData in it. A ParseObject constructed in this way will not
  have an objectId and will not persist to the database until save() is called.
  <p>
  Class names must be alphanumerical plus underscore, and start with a letter. It is recommended
@@ -1521,7 +1521,7 @@ public static <A HREF="../../com/parse/ParseObject.html" title="class in com.par
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>className</CODE> - The object's class.<DD><CODE>objectId</CODE> - The object id for the referenced object.
-<DT><B>Returns:</B><DD>A ParseObject without data.</DL>
+<DT><B>Returns:</B><DD>A ParseObject without appData.</DL>
 </DD>
 </DL>
 <HR>
@@ -1539,7 +1539,7 @@ public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="cl
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>subclass</CODE> - The ParseObject subclass to create.<DD><CODE>objectId</CODE> - The object id for the referenced object.
-<DT><B>Returns:</B><DD>A ParseObject without data.</DL>
+<DT><B>Returns:</B><DD>A ParseObject without appData.</DL>
 </DD>
 </DL>
 <HR>
@@ -1736,7 +1736,7 @@ public final void <B>saveEventually</B>(<A HREF="../../com/parse/SaveCallback.ht
  locally in an on-disk cache until they can be delivered to Parse. They will be sent immediately
  if possible. Otherwise, they will be sent the next time a network connection is available.
  Objects saved this way will persist even after the app is closed, in which case they will be
- sent the next time the app is opened. If more than 10MB of data is waiting to be sent,
+ sent the next time the app is opened. If more than 10MB of appData is waiting to be sent,
  subsequent calls to saveEventually or deleteEventually will cause old saves to be silently
  discarded until the connection can be re-established, and the queued objects can be saved.
 <P>
@@ -1758,7 +1758,7 @@ public final bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/r
  locally in an on-disk cache until they can be delivered to Parse. They will be sent immediately
  if possible. Otherwise, they will be sent the next time a network connection is available.
  Objects saved this way will persist even after the app is closed, in which case they will be
- sent the next time the app is opened. If more than 10MB of data is waiting to be sent,
+ sent the next time the app is opened. If more than 10MB of appData is waiting to be sent,
  subsequent calls to saveEventually or deleteEventually will cause old saves to be silently
  discarded until the connection can be re-established, and the queued objects can be saved.
 <P>
@@ -1825,7 +1825,7 @@ refresh</H3>
 <DL>
 <DD><B>Deprecated.</B>&nbsp;<I>Please use <A HREF="../../com/parse/ParseObject.html#fetch()"><CODE>ParseObject.fetch()</CODE></A> instead.</I>
 <P>
-<DD>Refreshes this object with the data from the server. Call this whenever you want the state of
+<DD>Refreshes this object with the appData from the server. Call this whenever you want the state of
  the object to reflect exactly what is on the server.
 <P>
 <DD><DL>
@@ -1844,7 +1844,7 @@ refreshInBackground</H3>
 <DL>
 <DD><B>Deprecated.</B>&nbsp;<I>Please use <A HREF="../../com/parse/ParseObject.html#fetchInBackground(com.parse.GetCallback)"><CODE>ParseObject.fetchInBackground(GetCallback)</CODE></A> instead.</I>
 <P>
-<DD>Refreshes this object with the data from the server in a background thread. This is preferable
+<DD>Refreshes this object with the appData from the server in a background thread. This is preferable
  to using refresh(), unless your code is already running from a background thread.
 <P>
 <DD><DL>
@@ -1859,7 +1859,7 @@ fetch</H3>
 public &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; T <B>fetch</B>()
                             throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
-<DD>Fetches this object with the data from the server. Call this whenever you want the state of the
+<DD>Fetches this object with the appData from the server. Call this whenever you want the state of the
  object to reflect exactly what is on the server.
 <P>
 <DD><DL>
@@ -1876,7 +1876,7 @@ fetchInBackground</H3>
 <PRE>
 public final &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; bolts.Task&lt;T&gt; <B>fetchInBackground</B>()</PRE>
 <DL>
-<DD>Fetches this object with the data from the server in a background thread. This is preferable to
+<DD>Fetches this object with the appData from the server in a background thread. This is preferable to
  using fetch(), unless your code is already running from a background thread.
 <P>
 <DD><DL>
@@ -1891,7 +1891,7 @@ fetchInBackground</H3>
 <PRE>
 public final &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; void <B>fetchInBackground</B>(<A HREF="../../com/parse/GetCallback.html" title="class in com.parse">GetCallback</A>&lt;T&gt;&nbsp;callback)</PRE>
 <DL>
-<DD>Fetches this object with the data from the server in a background thread. This is preferable to
+<DD>Fetches this object with the appData from the server in a background thread. This is preferable to
  using fetch(), unless your code is already running from a background thread.
 <P>
 <DD><DL>
@@ -1906,7 +1906,7 @@ fetchIfNeededInBackground</H3>
 public final &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; bolts.Task&lt;T&gt; <B>fetchIfNeededInBackground</B>()</PRE>
 <DL>
 <DD>If this ParseObject has not been fetched (i.e. <A HREF="../../com/parse/ParseObject.html#isDataAvailable()"><CODE>ParseObject.isDataAvailable()</CODE></A> returns false),
- fetches this object with the data from the server in a background thread. This is preferable to
+ fetches this object with the appData from the server in a background thread. This is preferable to
  using <A HREF="../../com/parse/ParseObject.html#fetchIfNeeded()"><CODE>ParseObject.fetchIfNeeded()</CODE></A>, unless your code is already running from a background thread.
 <P>
 <DD><DL>
@@ -1923,7 +1923,7 @@ public &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in 
                                     throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
 <DD>If this ParseObject has not been fetched (i.e. <A HREF="../../com/parse/ParseObject.html#isDataAvailable()"><CODE>ParseObject.isDataAvailable()</CODE></A> returns false),
- fetches this object with the data from the server.
+ fetches this object with the appData from the server.
 <P>
 <DD><DL>
 
@@ -1940,7 +1940,7 @@ fetchIfNeededInBackground</H3>
 public final &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; void <B>fetchIfNeededInBackground</B>(<A HREF="../../com/parse/GetCallback.html" title="class in com.parse">GetCallback</A>&lt;T&gt;&nbsp;callback)</PRE>
 <DL>
 <DD>If this ParseObject has not been fetched (i.e. <A HREF="../../com/parse/ParseObject.html#isDataAvailable()"><CODE>ParseObject.isDataAvailable()</CODE></A> returns false),
- fetches this object with the data from the server in a background thread. This is preferable to
+ fetches this object with the appData from the server in a background thread. This is preferable to
  using <A HREF="../../com/parse/ParseObject.html#fetchIfNeeded()"><CODE>ParseObject.fetchIfNeeded()</CODE></A>, unless your code is already running from a background thread.
 <P>
 <DD><DL>
@@ -2093,7 +2093,7 @@ fetchAllIfNeededInBackground</H3>
 <PRE>
 public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;T&gt;&gt; <B>fetchAllIfNeededInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;T&gt;&nbsp;objects)</PRE>
 <DL>
-<DD>Fetches all the objects that don't have data in the provided list in the background.
+<DD>Fetches all the objects that don't have appData in the provided list in the background.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>objects</CODE> - The list of objects to fetch.
@@ -2108,7 +2108,7 @@ fetchAllIfNeeded</H3>
 public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; <A target="_top" HREF="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;T&gt; <B>fetchAllIfNeeded</B>(<A target="_top" HREF="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;T&gt;&nbsp;objects)
                                                     throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
-<DD>Fetches all the objects that don't have data in the provided list.
+<DD>Fetches all the objects that don't have appData in the provided list.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>objects</CODE> - The list of objects to fetch.
@@ -2125,7 +2125,7 @@ fetchAllIfNeededInBackground</H3>
 public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; void <B>fetchAllIfNeededInBackground</B>(<A target="_top" HREF="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</A>&lt;T&gt;&nbsp;objects,
                                                                         <A HREF="../../com/parse/FindCallback.html" title="class in com.parse">FindCallback</A>&lt;T&gt;&nbsp;callback)</PRE>
 <DL>
-<DD>Fetches all the objects that don't have data in the provided list in the background.
+<DD>Fetches all the objects that don't have appData in the provided list in the background.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>objects</CODE> - The list of objects to fetch.<DD><CODE>callback</CODE> - callback.done(result, e) is called when the fetch completes.</DL>
@@ -2183,7 +2183,7 @@ remove</H3>
 <PRE>
 public void <B>remove</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;key)</PRE>
 <DL>
-<DD>Removes a key from this object's data if it exists.
+<DD>Removes a key from this object's appData if it exists.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>key</CODE> - The key to remove.</DL>
@@ -2660,7 +2660,7 @@ public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="cl
 <DL>
 <DD>Stores the objects and every object they point to in the local datastore, recursively. If
  those other objects have not been fetched from Parse, they will not be stored. However, if they
- have changed data, all of the changes will be retained. To get the objects back later, you can
+ have changed appData, all of the changes will be retained. To get the objects back later, you can
  use a ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -2678,7 +2678,7 @@ public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="cl
 <DL>
 <DD>Stores the objects and every object they point to in the local datastore, recursively. If
  those other objects have not been fetched from Parse, they will not be stored. However, if they
- have changed data, all of the changes will be retained. To get the objects back later, you can
+ have changed appData, all of the changes will be retained. To get the objects back later, you can
  use a ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -2698,7 +2698,7 @@ public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="cl
 <DL>
 <DD>Stores the objects and every object they point to in the local datastore, recursively. If
  those other objects have not been fetched from Parse, they will not be stored. However, if they
- have changed data, all of the changes will be retained. To get the objects back later, you can
+ have changed appData, all of the changes will be retained. To get the objects back later, you can
  use a ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -2718,7 +2718,7 @@ public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="cl
 <DL>
 <DD>Stores the objects and every object they point to in the local datastore, recursively. If
  those other objects have not been fetched from Parse, they will not be stored. However, if they
- have changed data, all of the changes will be retained. To get the objects back later, you can
+ have changed appData, all of the changes will be retained. To get the objects back later, you can
  use a ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -2736,7 +2736,7 @@ public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="cl
 <DL>
 <DD>Stores the objects and every object they point to in the local datastore, recursively. If
  those other objects have not been fetched from Parse, they will not be stored. However, if they
- have changed data, all of the changes will be retained. To get the objects back later, you can
+ have changed appData, all of the changes will be retained. To get the objects back later, you can
  use a ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -2756,7 +2756,7 @@ public static &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="cl
 <DL>
 <DD>Stores the objects and every object they point to in the local datastore, recursively. If
  those other objects have not been fetched from Parse, they will not be stored. However, if they
- have changed data, all of the changes will be retained. To get the objects back later, you can
+ have changed appData, all of the changes will be retained. To get the objects back later, you can
  use a ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -2958,7 +2958,7 @@ fetchFromLocalDatastoreInBackground</H3>
 <PRE>
 public &lt;T extends <A HREF="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</A>&gt; void <B>fetchFromLocalDatastoreInBackground</B>(<A HREF="../../com/parse/GetCallback.html" title="class in com.parse">GetCallback</A>&lt;T&gt;&nbsp;callback)</PRE>
 <DL>
-<DD>Loads data from the local datastore into this object, if it has not been fetched from the
+<DD>Loads appData from the local datastore into this object, if it has not been fetched from the
  server already. If the object is not stored in the local datastore, this method with do
  nothing.
 <P>
@@ -2974,7 +2974,7 @@ fetchFromLocalDatastore</H3>
 public void <B>fetchFromLocalDatastore</B>()
                              throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
-<DD>Loads data from the local datastore into this object, if it has not been fetched from the
+<DD>Loads appData from the local datastore into this object, if it has not been fetched from the
  server already. If the object is not stored in the local datastore, this method with throw a
  CACHE_MISS exception.
 <P>
@@ -2994,7 +2994,7 @@ public void <B>pinInBackground</B>(<A target="_top" HREF="http://developer.andro
 <DL>
 <DD>Stores the object and every object it points to in the local datastore, recursively. If those
  other objects have not been fetched from Parse, they will not be stored. However, if they have
- changed data, all of the changes will be retained. To get the objects back later, you can use a
+ changed appData, all of the changes will be retained. To get the objects back later, you can use a
  ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -3011,7 +3011,7 @@ public bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/referen
 <DL>
 <DD>Stores the object and every object it points to in the local datastore, recursively. If those
  other objects have not been fetched from Parse, they will not be stored. However, if they have
- changed data, all of the changes will be retained. To get the objects back later, you can use a
+ changed appData, all of the changes will be retained. To get the objects back later, you can use a
  ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -3030,7 +3030,7 @@ public void <B>pin</B>(<A target="_top" HREF="http://developer.android.com/refer
 <DL>
 <DD>Stores the object and every object it points to in the local datastore, recursively. If those
  other objects have not been fetched from Parse, they will not be stored. However, if they have
- changed data, all of the changes will be retained. To get the objects back later, you can use a
+ changed appData, all of the changes will be retained. To get the objects back later, you can use a
  ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -3049,7 +3049,7 @@ public void <B>pinInBackground</B>(<A HREF="../../com/parse/SaveCallback.html" t
 <DL>
 <DD>Stores the object and every object it points to in the local datastore, recursively. If those
  other objects have not been fetched from Parse, they will not be stored. However, if they have
- changed data, all of the changes will be retained. To get the objects back later, you can use a
+ changed appData, all of the changes will be retained. To get the objects back later, you can use a
  ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -3067,7 +3067,7 @@ public bolts.Task&lt;<A target="_top" HREF="http://developer.android.com/referen
 <DL>
 <DD>Stores the object and every object it points to in the local datastore, recursively. If those
  other objects have not been fetched from Parse, they will not be stored. However, if they have
- changed data, all of the changes will be retained. To get the objects back later, you can use a
+ changed appData, all of the changes will be retained. To get the objects back later, you can use a
  ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>
@@ -3087,7 +3087,7 @@ public void <B>pin</B>()
 <DL>
 <DD>Stores the object and every object it points to in the local datastore, recursively. If those
  other objects have not been fetched from Parse, they will not be stored. However, if they have
- changed data, all of the changes will be retained. To get the objects back later, you can use a
+ changed appData, all of the changes will be retained. To get the objects back later, you can use a
  ParseQuery that uses ParseQuery#fromLocalDatastore(), or you can create an unfetched
  pointer with ParseObject.createWithoutData() and then call fetchFromLocalDatastore() on it.
 <P>

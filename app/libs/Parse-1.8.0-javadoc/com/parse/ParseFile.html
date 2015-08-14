@@ -100,7 +100,7 @@ Class ParseFile</H2>
 <P>
 ParseFile is a local representation of a file that is saved to the Parse cloud.
  <p>
- The workflow is to construct a ParseFile with data and optionally a filename. Then save it and
+ The workflow is to construct a ParseFile with appData and optionally a filename. Then save it and
  set it as a field on a ParseObject.
  <p>
  Example: ParseFile file = new ParseFile("hello".getBytes()); file.save(); ParseObject object =
@@ -121,13 +121,13 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../com/parse/ParseFile.html#ParseFile(byte[])">ParseFile</A></B>(byte[]&nbsp;data)</CODE>
+<TD><CODE><B><A HREF="../../com/parse/ParseFile.html#ParseFile(byte[])">ParseFile</A></B>(byte[]&nbsp;appData)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new file from a byte array.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../com/parse/ParseFile.html#ParseFile(byte[], java.lang.String)">ParseFile</A></B>(byte[]&nbsp;data,
+<TD><CODE><B><A HREF="../../com/parse/ParseFile.html#ParseFile(byte[], java.lang.String)">ParseFile</A></B>(byte[]&nbsp;appData,
           <A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;contentType)</CODE>
 
 <BR>
@@ -135,14 +135,14 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#ParseFile(java.lang.String, byte[])">ParseFile</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
-          byte[]&nbsp;data)</CODE>
+          byte[]&nbsp;appData)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a new file from a byte array and a name.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#ParseFile(java.lang.String, byte[], java.lang.String)">ParseFile</A></B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
-          byte[]&nbsp;data,
+          byte[]&nbsp;appData,
           <A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;contentType)</CODE>
 
 <BR>
@@ -164,7 +164,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#cancel()">cancel</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cancels the current network request and callbacks whether it's uploading or fetching data from
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cancels the current network request and callbacks whether it's uploading or fetching appData from
  the server.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -173,7 +173,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#getData()">getData</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synchronously gets the data for this object.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synchronously gets the appData for this object.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -181,7 +181,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#getDataInBackground()">getDataInBackground</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the data for this object in a background thread.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the appData for this object in a background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -189,7 +189,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#getDataInBackground(com.parse.GetDataCallback)">getDataInBackground</A></B>(<A HREF="../../com/parse/GetDataCallback.html" title="class in com.parse">GetDataCallback</A>&nbsp;dataCallback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the data for this object in a background thread.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the appData for this object in a background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -198,7 +198,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
                     <A HREF="../../com/parse/ProgressCallback.html" title="class in com.parse">ProgressCallback</A>&nbsp;progressCallback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the data for this object in a background thread.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the appData for this object in a background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -206,7 +206,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#getDataInBackground(com.parse.ProgressCallback)">getDataInBackground</A></B>(<A HREF="../../com/parse/ProgressCallback.html" title="class in com.parse">ProgressCallback</A>&nbsp;progressCallback)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the data for this object in a background thread.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the appData for this object in a background thread.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -230,7 +230,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 <TD><CODE><B><A HREF="../../com/parse/ParseFile.html#isDataAvailable()">isDataAvailable</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether the file has available data.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether the file has available appData.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -308,7 +308,7 @@ ParseFile is a local representation of a file that is saved to the Parse cloud.
 ParseFile</H3>
 <PRE>
 public <B>ParseFile</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
-                 byte[]&nbsp;data,
+                 byte[]&nbsp;appData,
                  <A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;contentType)</PRE>
 <DL>
 <DD>Creates a new file from a byte array, file name, and content type. Content type will be used
@@ -317,19 +317,19 @@ public <B>ParseFile</B>(<A target="_top" HREF="http://developer.android.com/refe
 <DL>
 <DT><B>Parameters:</B><DD><CODE>name</CODE> - The file's name, ideally with extension. The file name must begin with an alphanumeric
           character, and consist of alphanumeric characters, periods, spaces, underscores, or
-          dashes.<DD><CODE>data</CODE> - The file's data.<DD><CODE>contentType</CODE> - The file's content type.</DL>
+          dashes.<DD><CODE>appData</CODE> - The file's appData.<DD><CODE>contentType</CODE> - The file's content type.</DL>
 </DL>
 <HR>
 
 <A NAME="ParseFile(byte[])"><!-- --></A><H3>
 ParseFile</H3>
 <PRE>
-public <B>ParseFile</B>(byte[]&nbsp;data)</PRE>
+public <B>ParseFile</B>(byte[]&nbsp;appData)</PRE>
 <DL>
 <DD>Creates a new file from a byte array.
 <P>
 <DL>
-<DT><B>Parameters:</B><DD><CODE>data</CODE> - The file's data.</DL>
+<DT><B>Parameters:</B><DD><CODE>appData</CODE> - The file's appData.</DL>
 </DL>
 <HR>
 
@@ -337,7 +337,7 @@ public <B>ParseFile</B>(byte[]&nbsp;data)</PRE>
 ParseFile</H3>
 <PRE>
 public <B>ParseFile</B>(<A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;name,
-                 byte[]&nbsp;data)</PRE>
+                 byte[]&nbsp;appData)</PRE>
 <DL>
 <DD>Creates a new file from a byte array and a name. Giving a name with a proper file extension
  (e.g. ".png") is ideal because it allows Parse to deduce the content type of the file and set
@@ -346,21 +346,21 @@ public <B>ParseFile</B>(<A target="_top" HREF="http://developer.android.com/refe
 <DL>
 <DT><B>Parameters:</B><DD><CODE>name</CODE> - The file's name, ideally with extension. The file name must begin with an alphanumeric
           character, and consist of alphanumeric characters, periods, spaces, underscores, or
-          dashes.<DD><CODE>data</CODE> - The file's data.</DL>
+          dashes.<DD><CODE>appData</CODE> - The file's appData.</DL>
 </DL>
 <HR>
 
 <A NAME="ParseFile(byte[], java.lang.String)"><!-- --></A><H3>
 ParseFile</H3>
 <PRE>
-public <B>ParseFile</B>(byte[]&nbsp;data,
+public <B>ParseFile</B>(byte[]&nbsp;appData,
                  <A target="_top" HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;contentType)</PRE>
 <DL>
 <DD>Creates a new file from a byte array, and content type. Content type will be used instead of
  auto-detection by file extension.
 <P>
 <DL>
-<DT><B>Parameters:</B><DD><CODE>data</CODE> - The file's data.<DD><CODE>contentType</CODE> - The file's content type.</DL>
+<DT><B>Parameters:</B><DD><CODE>appData</CODE> - The file's appData.<DD><CODE>contentType</CODE> - The file's content type.</DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -407,7 +407,7 @@ isDataAvailable</H3>
 <PRE>
 public boolean <B>isDataAvailable</B>()</PRE>
 <DL>
-<DD>Whether the file has available data.
+<DD>Whether the file has available appData.
 <P>
 <DD><DL>
 </DL>
@@ -509,7 +509,7 @@ getData</H3>
 public byte[] <B>getData</B>()
                throws <A HREF="../../com/parse/ParseException.html" title="class in com.parse">ParseException</A></PRE>
 <DL>
-<DD>Synchronously gets the data for this object. You probably want to use
+<DD>Synchronously gets the appData for this object. You probably want to use
  <A HREF="../../com/parse/ParseFile.html#getDataInBackground(com.parse.ProgressCallback)"><CODE>ParseFile.getDataInBackground(com.parse.ProgressCallback)</CODE></A> instead unless you're already in a background thread.
 <P>
 <DD><DL>
@@ -525,12 +525,12 @@ getDataInBackground</H3>
 <PRE>
 public bolts.Task&lt;byte[]&gt; <B>getDataInBackground</B>(<A HREF="../../com/parse/ProgressCallback.html" title="class in com.parse">ProgressCallback</A>&nbsp;progressCallback)</PRE>
 <DL>
-<DD>Gets the data for this object in a background thread. `progressCallback` is guaranteed to be
+<DD>Gets the appData for this object in a background thread. `progressCallback` is guaranteed to be
  called with 100 before dataCallback is called.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>progressCallback</CODE> - A ProgressCallback that is called periodically with progress updates.
-<DT><B>Returns:</B><DD>A Task that is resolved when the data has been fetched.</DL>
+<DT><B>Returns:</B><DD>A Task that is resolved when the appData has been fetched.</DL>
 </DD>
 </DL>
 <HR>
@@ -540,12 +540,12 @@ getDataInBackground</H3>
 <PRE>
 public bolts.Task&lt;byte[]&gt; <B>getDataInBackground</B>()</PRE>
 <DL>
-<DD>Gets the data for this object in a background thread. `progressCallback` is guaranteed to be
+<DD>Gets the appData for this object in a background thread. `progressCallback` is guaranteed to be
  called with 100 before dataCallback is called.
 <P>
 <DD><DL>
 
-<DT><B>Returns:</B><DD>A Task that is resolved when the data has been fetched.</DL>
+<DT><B>Returns:</B><DD>A Task that is resolved when the appData has been fetched.</DL>
 </DD>
 </DL>
 <HR>
@@ -556,7 +556,7 @@ getDataInBackground</H3>
 public void <B>getDataInBackground</B>(<A HREF="../../com/parse/GetDataCallback.html" title="class in com.parse">GetDataCallback</A>&nbsp;dataCallback,
                                 <A HREF="../../com/parse/ProgressCallback.html" title="class in com.parse">ProgressCallback</A>&nbsp;progressCallback)</PRE>
 <DL>
-<DD>Gets the data for this object in a background thread. `progressCallback` is guaranteed to be
+<DD>Gets the appData for this object in a background thread. `progressCallback` is guaranteed to be
  called with 100 before dataCallback is called.
 <P>
 <DD><DL>
@@ -570,7 +570,7 @@ getDataInBackground</H3>
 <PRE>
 public void <B>getDataInBackground</B>(<A HREF="../../com/parse/GetDataCallback.html" title="class in com.parse">GetDataCallback</A>&nbsp;dataCallback)</PRE>
 <DL>
-<DD>Gets the data for this object in a background thread.
+<DD>Gets the appData for this object in a background thread.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>dataCallback</CODE> - A GetDataCallback that is called when the get completes.</DL>
@@ -583,7 +583,7 @@ cancel</H3>
 <PRE>
 public void <B>cancel</B>()</PRE>
 <DL>
-<DD>Cancels the current network request and callbacks whether it's uploading or fetching data from
+<DD>Cancels the current network request and callbacks whether it's uploading or fetching appData from
  the server.
 <P>
 <DD><DL>
