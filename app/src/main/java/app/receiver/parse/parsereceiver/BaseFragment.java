@@ -3,7 +3,7 @@ package app.receiver.parse.parsereceiver;
 import android.app.Activity;
 import android.support.v4.app.Fragment;
 
-public abstract class BaseFragment extends Fragment
+public abstract class BaseFragment extends Fragment implements ActivityCommunicator
 {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
@@ -14,5 +14,10 @@ public abstract class BaseFragment extends Fragment
     {
         super.onAttach(activity);
         ((MainActivity) activity).onSectionAttached(this.getSectionNumber());
+    }
+
+    public void onFragmentMessage(String message, Object data)
+    {
+
     }
 }

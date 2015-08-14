@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/lblEditKey"
+        style="@style/Label" />
+
+    <EditText
+        android:id="@+id/txtEditValue"
+        style="@style/TextInput"
+        android:inputType="textNoSuggestions" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnEditSave"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_weight=".50"
+            android:text="@string/save"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnEditCancel"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_weight=".50"
+            android:text="@string/cancel"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
+

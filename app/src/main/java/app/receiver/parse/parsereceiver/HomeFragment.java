@@ -1,5 +1,6 @@
 package app.receiver.parse.parsereceiver;
 
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.res.Resources;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -56,6 +58,24 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener
         listView = (ListView) rootView.findViewById(R.id.appDataList);
         View empty = rootView.findViewById(R.id.empty);
         listView.setEmptyView(empty);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                AppData appData = (AppData) listView.getItemAtPosition(position);
+
+                android.support.v4.app.FragmentManager manager = getFragmentManager();
+
+                EditDataDialogFragment editDataDialog = new EditDataDialogFragment();
+                Bundle args = new Bundle();
+                args.putString("key", appData.getKey());
+                args.putString("value", appData.getValue());
+                editDataDialog.setArguments(args);
+                editDataDialog.show(manager, "edit_data_dialog");
+            }
+        });
+
         appDataAdapter = new AppDataAdapter();
         getData();
 
@@ -137,6 +157,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener
             @Override
             public void done(ParseObject parseObject, ParseException e)
             {
+                getData();
+                appDataAdapter.notifyDataSetChanged();
+
                 hideProgressDialog();
                 Log.d(LOGTAG, "Data loaded");
                 Toast.makeText(getActivity().getBaseContext(), R.string.done_read_data, Toast.LENGTH_SHORT).show();
@@ -184,21 +207,22 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener
                     appDataList.add(dt);
                 }
 
-        /*installation.put("receive_flag", 1);
-
-        installation.saveInBackground(new SaveCallback() {
-
-            @Override
-            public void done(ParseException e) {
-                //Toast.makeText(getApplicationContext(), "AppData saved successfully", Toast.LENGTH_LONG).show();
-            }
-        });*/
-
                 this.appDataAdapter.setAppDataList(appDataList);
             }
-        } catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             ex.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onFragmentMessage(String message, Object data)
+    {
+        if (message.equals("saved"))
+        {
+            getData();
+            appDataAdapter.notifyDataSetChanged();
         }
     }
 }

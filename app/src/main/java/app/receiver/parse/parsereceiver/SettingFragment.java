@@ -49,7 +49,7 @@ public class SettingFragment extends BaseFragment
             txtClientKey.setText(setting.getClientKey());
         }
 
-        Button saveButton = (Button) rootView.findViewById(R.id.btnSaveReminder);
+        Button saveButton = (Button) rootView.findViewById(R.id.btnSaveSetting);
         saveButton.setOnClickListener(new View.OnClickListener()
         {
             @Override

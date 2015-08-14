@@ -43,7 +43,7 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/btnSaveReminder"
+                    android:id="@+id/btnSaveSetting"
                     style="@style/Button"
                     android:layout_width="match_parent"
                     android:layout_weight=".50"

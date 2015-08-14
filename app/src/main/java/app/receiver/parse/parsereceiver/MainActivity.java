@@ -8,13 +8,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks
+public class MainActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks, FragmentCommunicator
 {
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
     private CharSequence mTitle;
+
+    private BaseFragment currentFragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,26 +42,26 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerF
     public void onNavigationDrawerItemSelected(int position)
     {
 
-        Fragment fragment = null;
+        currentFragment = null;
 
         switch (position)
         {
             case 0:
-                fragment = new HomeFragment();
+                currentFragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new SettingFragment();
+                currentFragment = new SettingFragment();
                 break;
             default:
                 break;
         }
 
 
-        if (fragment != null)
+        if (currentFragment != null)
         {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
-                    .replace(R.id.container, fragment)
+                    .replace(R.id.container, currentFragment)
                     .commit();
         }
 
@@ -104,4 +107,9 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerF
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onActivityMessage(String message, Object data)
+    {
+        currentFragment.onFragmentMessage("saved", null);
+    }
 }
