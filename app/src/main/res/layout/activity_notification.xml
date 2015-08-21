@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              style="@style/CommonLayout">
+
+    <TextView
+        android:id="@+id/lblParseAlert"
+        style="@style/Label"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
+
+    <TextView style="@style/separator"/>
+
+    <TextView
+        android:id="@+id/lblParseBadge"
+        style="@style/Label"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <TextView style="@style/separator"/>
+
+    <TextView
+        android:id="@+id/lblParseSound"
+        style="@style/Label"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <TextView style="@style/separator"/>
+
+    <TextView
+        android:id="@+id/lblParseTitle"
+        style="@style/Label"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <TextView style="@style/separator"/>
+
+    <TextView
+        android:id="@+id/lblParsePayload"
+        style="@style/Label"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+</LinearLayout>

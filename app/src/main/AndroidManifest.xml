@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.receiver.parse.parsereceiver" >
 
-    <!-- To access Google+ APIs: -->
+    <!--Parse start-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -13,6 +13,7 @@
     <permission android:protectionLevel="signature"
                 android:name="app.receiver.parse.parsereceiver.permission.C2D_MESSAGE" />
     <uses-permission android:name="app.receiver.parse.parsereceiver.permission.C2D_MESSAGE" />
+    <!--Parse end-->
 
     <application
         android:name="ParseReceiver"
@@ -31,6 +32,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".NotificationActivity" />
+
+        <!--Parse start-->
         <service android:name="com.parse.PushService" />
 
         <receiver android:name="com.parse.ParseBroadcastReceiver" >
@@ -40,7 +44,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:name="app.receiver.parse.parsereceiver.NotificationReceiver"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.parse.push.intent.RECEIVE" />
@@ -59,6 +63,8 @@
                 <category android:name="app.receiver.parse.parsereceiver" />
             </intent-filter>
         </receiver>
+        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/ic_stat_pr"/>
+        <!--Parse end-->
     </application>
 
 </manifest>
