@@ -1,0 +1,25 @@
+<FrameLayout style="@style/CommonLayout"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             tools:context="app.receiver.parse.parsereceiver.NotificationListFragment">
+
+    <ListView
+        android:id="@+id/reminderList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+    </ListView>
+
+    <TextView
+        android:id="@+id/emptyNotificationList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/no_notification"
+        android:textColor="@android:color/black"/>
+
+</FrameLayout>

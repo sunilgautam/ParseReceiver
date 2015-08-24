@@ -42,7 +42,6 @@ public class AppDataAdapter extends BaseAdapter
     @Override
     public View getView(int index, View view, ViewGroup parent)
     {
-        System.out.println(">>>>>>>>>> # " + index);
         ViewHolder holder = null;
         if (view == null)
         {
@@ -73,16 +72,16 @@ public class AppDataAdapter extends BaseAdapter
     {
         this.appDataList = appDataList;
     }
-}
 
-class ViewHolder
-{
-    TextView lblKey;
-    TextView lblValue;
-
-    ViewHolder(View v)
+    class ViewHolder
     {
-        this.lblKey = (TextView) v.findViewById(R.id.lblKey);
-        this.lblValue = (TextView) v.findViewById(R.id.lblValue);
+        TextView lblKey;
+        TextView lblValue;
+
+        ViewHolder(View v)
+        {
+            this.lblKey = (TextView) v.findViewById(R.id.lblKey);
+            this.lblValue = (TextView) v.findViewById(R.id.lblValue);
+        }
     }
 }

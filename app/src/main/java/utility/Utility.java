@@ -11,15 +11,32 @@ import com.parse.ParseUser;
 
 import org.json.JSONArray;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import app.receiver.parse.parsereceiver.ParseReceiver;
 import app.receiver.parse.parsereceiver.Setting;
 
 public class Utility
 {
-
     private static final String APP_SET_APP_ID = "app_set_app_id";
     private static final String APP_SET_CLIENT_KEY = "app_set_client_key";
     private static final String APP_SET_CONFIG_KEY = "app_set_config_key";
+
+    private static final DateFormat utilDateFormatter = new SimpleDateFormat("dd-MM-yyyy, hh:mm a");
+
+    public static String getReminderDate(Date crDate)
+    {
+        try
+        {
+            return utilDateFormatter.format(crDate);
+        }
+        catch (Exception ex)
+        {
+            return "";
+        }
+    }
 
     public static Setting getSettings(Context context)
     {

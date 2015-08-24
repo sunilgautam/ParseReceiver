@@ -94,6 +94,6 @@ public class SettingFragment extends BaseFragment
     @Override
     int getSectionNumber()
     {
-        return 2;
+        return 3;
     }
 }

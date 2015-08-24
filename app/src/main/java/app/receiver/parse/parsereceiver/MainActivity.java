@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks, FragmentCommunicator
 {
-
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
     private CharSequence mTitle;
@@ -34,14 +33,13 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerF
 
         if (ParseReceiver.PARSE_SETTING.getAppId().equals("") || ParseReceiver.PARSE_SETTING.getClientKey().equals(""))
         {
-            mNavigationDrawerFragment.selectItem(1);
+            mNavigationDrawerFragment.selectItem(2);
         }
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position)
     {
-
         currentFragment = null;
 
         switch (position)
@@ -50,12 +48,14 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerF
                 currentFragment = new HomeFragment();
                 break;
             case 1:
+                currentFragment = new NotificationListFragment();
+                break;
+            case 2:
                 currentFragment = new SettingFragment();
                 break;
             default:
                 break;
         }
-
 
         if (currentFragment != null)
         {
@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerF
                 mTitle = getString(R.string.title_home);
                 break;
             case 2:
+                mTitle = getString(R.string.title_notifications);
+                break;
+            case 3:
                 mTitle = getString(R.string.title_setting);
                 break;
         }
@@ -87,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements NavigationDrawerF
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
